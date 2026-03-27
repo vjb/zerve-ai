@@ -1,0 +1,2748 @@
+# Welcome to Zerve
+
+Zerve is an AI-native, code-based environment built for visual data exploration and production-ready results.
+
+## About Zerve
+
+Zerve brings together an AI agent, notebook-style development, and stable execution in one workspace. It includes pre-installed libraries, scalable compute, and parallel processing by default. It integrates with the tools and data sources teams already use, removes silos, and helps people move from question to insight quickly — whether they are beginners or experts.
+
+## How are we different ?
+
+We are also the first context-aware AI development environment built for working with data, trusted by leading organizations worldwide. Unlike generic coding assistants designed for software engineering, Zerve is purpose-built for the exploratory nature of data science. The Zerve agent tracks your data, hypotheses, and results, while a collaborative, version-controlled canvas and reliable orchestration engine make it simple to build, scale, and share workflows. The result: Quicker outcomes, while maintaining the quality.
+
+{% embed url="<https://www.youtube.com/watch?v=IMBILPX8aUM>" %}
+
+
+# How to Get Started ?
+
+There are many ways in which you can get started. Let us see them below.
+
+You can get started quickly on Zerve by using one of the following methods:
+
+* **Chat with our AI Agent** **:** Chat with our context aware AI agent that is built specifically for data science. Type in a prompt and watch the agent go.
+* **Explore Playground :** This option will kickstart an interactive tutorial with a playground project to show all the features available.
+* **Create Canvas :** You can create a canvas and start building your own project with your data
+* **Navigate to Notebook View :**  You can also navigate to a notebook view by using the process shown below.
+* **Browse Example Datasets :** By using this option, you can import popular opensource datasets into a canvas and start exploring.
+* **Explore Popular Canvases :** Here you can find popular public canvas that has been publish by other users.
+* **Import Jupyter Notebook :** Select the notebooks from your computer and drop them into an empty canvas. Zerve will process each cell and code blocks will be added to the canvas.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FbkjsbfSoZg2Xx8eKPKw2%2FHome%20Page.png?alt=media&#x26;token=76119c8a-e205-448c-bab0-8180abf1794a" alt=""><figcaption></figcaption></figure>
+
+
+# Organization Controls
+
+Zerve provides organization control settings to create workspaces, manage cloud configurations, create, edit and manage roles.
+
+As a workspace owner you can add users, create and change user roles, groups, and create shared assets in your workspace.
+
+### Create Organization:
+
+User can create an organization by using Create Organization option at the top left corner of the home page
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Ft96gxxMX6x7sgRVB4GgN%2FCreate%20org.png?alt=media&#x26;token=f9efaeab-c0d1-4775-9524-b758dfe77f95" alt=""><figcaption></figcaption></figure>
+
+### Folders:
+
+Folders are similar to individual teams/projects inside an organization. All canvas projects, assets, libraries are specific to each folder. One can create a folder inside an organization by selecting the Create New option
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNV5ajvNL9857oPawOsEL%2FCreating%20Folder.png?alt=media&#x26;token=f8203e06-b00f-4aca-aa88-5ab98d6e6a51" alt=""><figcaption><p>Creating a Folder</p></figcaption></figure>
+
+Folders and canvases created by the user in an organization are listed under "My Projects". The Folders and Canvases shared with the user are listed under "Shared with me in Org" .
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FpM0skWuMF8CG6UAnbWxz%2FMy%20Project%20and%20Shared%20with%20me.png?alt=media&#x26;token=c60a18b6-4a6e-4853-90b7-bed0a56d01a3" alt=""><figcaption></figcaption></figure>
+
+### Self Hosting:
+
+This part of the organization control is used to set up cloud connection and resources. This is usually the first thing that needs to be done once an organization is configured. Refer to [cloud](https://docs.zerve.ai/guide/integrations/cloud "mention")integration page for setup instructions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fx3P8QYyfcaS7iswin4y4%2FSelf%20hosting.png?alt=media&#x26;token=96d37d94-540f-4485-87f0-992cedc09f8c" alt=""><figcaption></figcaption></figure>
+
+### Members:
+
+Invite, remove members from an Organization from Settings. The member will receive an email with signup link or you can share a link with them. More details are available in [Members](https://docs.zerve.ai/guide/organization-controls/members) tab
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F27iGI2yjou5ovsP58JUm%2FScreenshot%202025-11-25%20at%202.02.32%E2%80%AFPM.png?alt=media&#x26;token=7a28aa9e-135c-49e6-b6c4-cd9b4bd05eef" alt=""><figcaption><p>Members access</p></figcaption></figure>
+
+### Compute Usage:
+
+This is Dashboard for tracking and analyzing compute resource utilization across your organization. You can track it by Compute type, blocks and users for different timeframes. This is available under Settings -> Compute Usage
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F2yOOgyQTLEXZREwszkWO%2FScreenshot%202025-11-25%20at%202.03.52%E2%80%AFPM.png?alt=media&#x26;token=187ebc0c-a9e4-4110-ac46-49337dd3c5f4" alt=""><figcaption><p>Compute Usage</p></figcaption></figure>
+
+<table><thead><tr><th width="213">Function Level</th><th>Description</th></tr></thead><tbody><tr><td>Members</td><td>Add, View, Remove members from a workspace.</td></tr><tr><td>Groups</td><td>Create, Edit, View and Add members to a group inside a workspace</td></tr><tr><td>Workspaces</td><td>This empower administrators to limit the level of access granted to members within a workspace.</td></tr><tr><td>Roles</td><td>This often involves defining roles within the organization and specifying what each role can or cannot do.</td></tr><tr><td>Billing</td><td>Managing access to payments page</td></tr><tr><td>Canvases</td><td>Create/Edit/View new or existing canvases. </td></tr><tr><td>Environments</td><td>To control who can create, view, or have no access to specific development, testing, or deployment environments.</td></tr><tr><td>Data Connections</td><td>To ensure that the individuals or teams have appropriate access to data sources while protecting sensitive information.</td></tr><tr><td>Queries</td><td>To extract and analyze data, to ensure data security and efficient data management.</td></tr><tr><td>Constants &#x26; Secrets</td><td>To maintain data security and controlling who can create, view, or have no access to sensitive information.</td></tr><tr><td>Functions</td><td>To manage who can create, and have access to custom coding functions developed within workspaces.</td></tr><tr><td>Deploy APIs</td><td>To manage access to individual or team to deploy the new services and integrations securely.</td></tr><tr><td>Exports</td><td>Exports are used to share and analyze data, with individuals or teams to have appropriate access.</td></tr><tr><td>Data Apps</td><td>Data apps often serve as platforms for data analysis, reporting, and decision-making, to ensure the individuals or teams have appropriate access.</td></tr><tr><td>Scheduled Jobs</td><td>To manage access to automated tasks or predefined schedule.</td></tr></tbody></table>
+
+Each function within a role has 3 levels of role permissions.
+
+<table><thead><tr><th width="319">Role Permission</th><th>Comment</th></tr></thead><tbody><tr><td>No Access</td><td>Cannot create/view/edit using that particular function. </td></tr><tr><td>View</td><td>Only view a particular function. For example, can view self-hosting details.</td></tr><tr><td>Create/Edit</td><td>Create/Edit using that particular function. For example, can create/set up an account using self-hosting.</td></tr></tbody></table>
+
+
+# Creating Organization
+
+You can create an organization by clicking on the arrow next to your username on the top left as shown in the picture below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FlJg7Oz2FbIktuxPOQdCQ%2FScreenshot%202025-03-18%20at%204.04.11%E2%80%AFPM.png?alt=media&#x26;token=dbed97a3-94ee-46ff-9268-8d8895c9031e" alt=""><figcaption><p>Create an organization</p></figcaption></figure>
+
+
+# Working with Folders
+
+Folders in Zerve AI are essential for organizing, managing, and collaborating on projects efficiently.
+
+## Why Folders?
+
+1. Folders allow the organizations to segment the projects or tasks into manageable units. This makes it easier to focus on specific tasks without the clutter of unrelated information.
+2. Shared space offers for collaborative contribution, review, and discuss project-related work.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FVRHWrpYskEVykF4RajZs%2FCreating%20org.png?alt=media&#x26;token=f48a7886-4dfd-4bca-b826-62918cc3e752" alt=""><figcaption></figcaption></figure>
+
+
+# Creating Folders
+
+Upon navigating to organization, the button “Create New” lets the user create a Folder.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNV5ajvNL9857oPawOsEL%2FCreating%20Folder.png?alt=media&#x26;token=f8203e06-b00f-4aca-aa88-5ab98d6e6a51" alt=""><figcaption></figcaption></figure>
+
+
+# Creating a Canvas
+
+Creating a canvas within Folder is slightly different from individual account as the access to the canvas is restricted to the group members based on the roles assigned (view, edit, etc.,).  You can create a canvas by clicking on "Create Canvas" option on top left.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F8OlktFNDyb2z4ESnMS5U%2FCreate%20Canvas.png?alt=media&#x26;token=89e3a343-aea3-47d8-b52e-298dbc4e831f" alt=""><figcaption></figcaption></figure>
+
+
+# Members
+
+We can add members to the organization. Members can be added from the Settings -> Members. You can also select their roles. They can either be Admin or Member. You can either share a link from this tab or send them an invite over mail.
+
+To send them a link use the option highlighted below
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F1DGUHfGwDl8a5Pq2Mq2A%2FInvite%20using%20link.png?alt=media&#x26;token=6c5261ad-7b07-425a-96a7-bf9ce154fc84" alt=""><figcaption><p>Invite using link</p></figcaption></figure>
+
+To send an invite as email, use the option highlighted below.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FKfh2Q1DIp4JcnevDsWOE%2FInvite%20using%20email.png?alt=media&#x26;token=ec36c25f-2da2-41c7-8915-409acb58555c" alt=""><figcaption><p>Invite using email</p></figcaption></figure>
+
+You can also transfer ownership of the folder or organization by clicking on the three dots you see next to the user's name. You can also delete that member following the same process.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FoYGPJjswQusUQ3wELALw%2FTransfer%20ownership.png?alt=media&#x26;token=fa0f25ce-c3c1-474b-8404-67a5658b9482" alt=""><figcaption><p>Transfer Ownership / Delete member</p></figcaption></figure>
+
+
+# Navigating from Notebook
+
+The canvas view in the my canvases section can be adjusted according to the user's preference. The different views are show below:
+
+## Navigating from notebook to home
+
+You can navigate from the canvas you are working on to home page (where all your canvases are present) by clicking on the Zerve icon as shown below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6XvdI9kS5FqqfcOaATse%2FScreen%20Recording%202025-11-25%20at%204.51.39%E2%80%AFPM.mp4?alt=media&token=8e43e487-a974-49a0-9262-88adc4c38d01>" %}
+
+
+# Files
+
+File system is the storage space for all the files required to create, run and execute the canvas. User can upload files, use it in your code, download files and delete them
+
+
+# Storing Files
+
+Canvas file system is a dynamic environment to store files of any type with a specified size limit.
+
+## How Zerve stores files:
+
+The file system in zerve uses S3 for storage and supports uploading of almost all the file types. It supports uploading of files up to 10GB in the base plan.&#x20;
+
+## Upload files:
+
+Users can drag and drop a file into the canvas or browse files using explorer.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FgDJjm6IGhbEALgBn7qjs%2FScreen%20Recording%202025-11-25%20at%205.47.09%E2%80%AFPM.mp4?alt=media&token=35614cb9-d59c-4ff0-b46b-4b86fdb0f502>" %}
+
+
+# Import Files
+
+Once the file is uploaded, it can be accessed in the Python or R blocks, and the files can be of any type.
+
+Below are a couple of examples of accessing files such as a CSV, and JSON in the Python and R blocks
+
+**CSV files**
+
+CSV files can be imported into Python block by using the syntax below as dataframe. This supports all the file types supported by pandas
+
+```python
+import pandas as pd
+df = pd.read_csv("housing.csv")
+```
+
+Similarly the following syntax can be used for R
+
+```r
+file = "housing.csv"
+df = read.csv(file)
+```
+
+**Accessing JSON**
+
+JSON files can also be accessed from the file system in Python or R block.
+
+```python
+import json
+
+# Open and read the raw content of the file
+with open('./testdata.json', 'r') as json_file:
+    content = json_file.read()
+
+# Print the first few characters to understand the structure
+print("First 500 characters of the file:")
+print(content[:500])  # Adjust the number as needed for better understanding
+
+# Check if the content contains multiple JSON objects
+try:
+    data = json.loads(content)
+    print("Single JSON object loaded successfully.")
+except json.JSONDecodeError as e:
+    print(f"JSONDecodeError: {e}")
+    
+    # Possible handling for multiple JSON objects:
+    # Assuming the objects are newline-separated
+    segments = content.splitlines()  # Split by lines (change the delimiter if needed)
+    parsed_data = []
+    
+    for segment in segments:
+        if segment.strip():  # Skip empty lines
+            try:
+                parsed_data.append(json.loads(segment))
+            except json.JSONDecodeError as segment_error:
+                print(f"Failed to parse segment: {segment_error}")
+
+    print(f"Parsed {len(parsed_data)} JSON objects/segments successfully.")
+
+    # For demonstration purposes, let's print the parsed objects
+    for i, obj in enumerate(parsed_data):
+        print(f"Object {i+1}: {obj}")
+
+```
+
+Syntax to access json in R
+
+```r
+# Load required package
+library(jsonlite)
+
+# Read the raw content of the file
+file_path <- './testdata.json'
+content <- readLines(file_path, warn = FALSE)
+
+# Print the first few characters to understand the structure
+cat("First 500 characters of the file:\n")
+cat(substr(paste(content, collapse = "\n"), 1, 500), "\n\n")
+
+# Attempt to parse the content as a single JSON object
+try({
+  data <- fromJSON(paste(content, collapse = "\n"))
+  cat("Single JSON object loaded successfully.\n")
+  print(data)
+}, silent = TRUE)
+
+# Handling multiple JSON objects scenario
+segments <- unlist(strsplit(paste(content, collapse = "\n"), "\n"))
+
+parsed_data <- list()
+for (i in seq_along(segments)) {
+  segment <- segments[i]
+  if (nchar(trimws(segment)) > 0) { # Skip empty lines
+    try({
+      parsed_data[[i]] <- fromJSON(segment)
+    }, silent = TRUE)
+  }
+}
+
+cat("Parsed", le
+```
+
+
+# Download Files
+
+The files can also be seamlessly downloaded into file system from Python or R blocks.
+
+## **Download into File system**
+
+Python Syntax for downloading file a file into file system
+
+```python
+import requests
+
+# URL of the Iris dataset
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+file_path = "./iris_dataset.csv"  # Desired local file path
+
+# Send an HTTP GET request to the URL
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Open a local file with write-binary ('wb') mode
+    with open(file_path, 'wb') as file:
+        # Write the content to the local file
+        file.write(response.content)
+    print(f"File downloaded successfully and saved as {file_path}")
+else:
+    print(f"Failed to download the file. HTTP status code: {response.status_code}")
+
+```
+
+R Syntax for downloading file a file into file system
+
+```r
+# URL of the Iris dataset
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+file_path <- "./iris_dataset.csv"  # Desired local file path
+
+# Download the file
+download.file(url, file_path, method = "auto")
+
+# Check if the file was downloaded
+if (file.exists(file_path)) {
+  cat("File downloaded successfully and saved as", file_path, "\n")
+} else {
+  cat("Failed to download the file.\n")
+}
+
+```
+
+## **Download from File system**
+
+The files from file system can also be downloaded into the local machine.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FPGEZl8Y2t668o3ozBG7o%2FDownload%20File.png?alt=media&#x26;token=2a5afe4e-56e2-4310-af03-3eab056f2ac7" alt=""><figcaption><p>Download file without code</p></figcaption></figure>
+
+
+# Deleting Files
+
+The zerve's canvas offers different ways to delete a file from file system
+
+## Deleting single file
+
+The file can be deleted from the canvas UI using delete file option upon right clicking the file.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fy2qR7d6TfGZOwWL28DUU%2FDeleting%20File.png?alt=media&#x26;token=a90aab0e-10c5-4151-8d0e-455a12d07acc" alt=""><figcaption><p>Deleting file without code</p></figcaption></figure>
+
+## Deleting multiple files
+
+The multiple blocks can be deleted from the file system through Python or R block
+
+Python syntax for deleting multiple files
+
+```python
+import os
+import glob
+
+# Specify the directory path
+directory_path = "./"  # Replace with your directory path
+
+# Use glob to find all files in the directory
+files = glob.glob(os.path.join(directory_path, "*"))  # '*' matches all files
+
+# Loop through the files and delete each one
+for file_path in files:
+    try:
+        os.remove(file_path)
+        print(f"Deleted: {file_path}")
+    except Exception as e:
+        print(f"Failed to delete {file_path}. Reason: {e}")
+
+# Optional: Check if the directory is now empty
+remaining_files = os.listdir(directory_path)
+if not remaining_files:
+    print("The directory is now empty.")
+else:
+    print(f"Remaining files in the directory: {remaining_files}")
+
+```
+
+R syntax for deleting multiple blocks
+
+```r
+# Specify the directory path
+directory_path <- "./"  # Replace with your directory path
+
+# List all files in the directory
+files <- list.files(directory_path, full.names = TRUE)
+
+# Loop through the files and delete each one
+for (file_path in files) {
+  if (file.remove(file_path)) {
+    cat("Deleted:", file_path, "\n")
+  } else {
+    cat("Failed to delete:", file_path, "\n")
+  }
+}
+
+# Optional: Check if the directory is now empty
+remaining_files <- list.files(directory_path)
+if (length(remaining_files) == 0) {
+  cat("The directory is now empty.\n")
+} else {
+  cat("Remaining files in the directory:", remaining_files, "\n")
+}
+
+```
+
+
+# Files in Folder
+
+The imported files can also be organized by creating a folder within the file system. Same thing can be done for files you save.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FHpVPvgY2C1dP8oZ5SbLw%2FScreenshot%202025-11-25%20at%2010.02.01%E2%80%AFPM.png?alt=media&#x26;token=34ef656c-3c50-43ba-8f26-3f495099df99" alt=""><figcaption><p>Folder within file system</p></figcaption></figure>
+
+
+# Installing Packages
+
+User can install Python, Linux and R packages by using the Environment feature.
+
+Environment can contain multiple Requirements. Requirements are the set of packages that are required for the project. You can find the environments option as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FyRgTh5gh5KAqLlVyuTTt%2FScreenshot%202025-11-26%20at%2011.06.06%E2%80%AFAM.png?alt=media&#x26;token=190e4280-8d73-4b52-90bb-006cce934438" alt=""><figcaption></figcaption></figure>
+
+## Navigating Environments
+
+Each Requirement under Environment has three sections \
+1\. Python/R package\
+2\. Linux Packages\
+3\. Environment Variables
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNMyjNfsyCjoOnj7KJEud%2FNavigating%20Environments.png?alt=media&#x26;token=b85158f0-db90-40b4-82b6-37f3918ed912" alt=""><figcaption></figcaption></figure>
+
+## Importing Requirements
+
+Any requirement build from another notebook in the same Folder can be reused. Once you import a new requirement, it will build. Once done you will have an option to activate it. Below video shows how you can reuse requirements.&#x20;
+
+There are many requirements available when you open a Notebook, you can activate any of these requirements to start.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FTcnmlAfDH3leJCao5BtR%2FImport%20environment.mp4?alt=media&token=84560080-db4f-4bd0-9b28-d8f760855445>" %}
+
+## Creating New Environment
+
+You can also create another environment as well. Following video shows how.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FD3AZtDdDyp37xmonn6HT%2FNew%20environment.mp4?alt=media&token=bdf03b15-8afe-4874-8da8-67fbbf6b8043>" %}
+
+## Adding Packages from GitHub
+
+You can add packages from GitHub into you environment as well. Please follow the structure as shown below for your package. The example for paper-scraper is shown below
+
+```
+paper-scraper@git+https://github.com/blackadad/paper-scraper.git
+```
+
+
+# Global Imports
+
+Imports done under each code block will work only inside it. Users can add a package or function to Global Imports section to make it available across all the blocks in the canvas.
+
+## How to set global import commands
+
+Once a package is imported in Global Imports, it can be used in any block in the Notebook
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FIcvLrbeK03Uj0t5qv0ah%2FScreen%20Recording%202025-11-26%20at%2011.21.39%E2%80%AFAM.mp4?alt=media&token=d71344e7-053f-4c4b-a51e-afaf98c898bf>" %}
+
+## How to set local, block-level import commands
+
+For larger packages like pytorch - which are required to be run only on specific blocks - we can use block level imports.&#x20;
+
+As seen in the screenshot below, torch wasn't imported globally and at a block level. The first block imports torch and runs, but the second block gives an error as torch wasn't imported locally. &#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fn7vDkSezjAu6MXvKicZL%2FScreenshot%202025-11-26%20at%2011.59.27%E2%80%AFAM.png?alt=media&#x26;token=64b1e919-6265-4523-a7ec-30cf47c13ff8" alt=""><figcaption></figcaption></figure>
+
+
+# Blocks
+
+## Block
+
+A Block is the IDE (Integrated Development Environment) for the coding. Though it is similar to other IDEs yet it has the luxury of executing the codes hassle-free. There are many types of blocks which we will see in the upcoming pages in detail.
+
+## Auto naming blocks
+
+Auto-naming of the block typically refers to generating meaningful names for variables, functions, classes, or other elements in your code automatically, often based on specific rules or patterns. This can help improve code readability and maintainability.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FnnxXkRRSOqHVBywXcOGg%2FBlock%20naming.png?alt=media&#x26;token=82955394-76f5-4bae-a41a-235dd51485b9" alt=""><figcaption><p>Auto naming</p></figcaption></figure>
+
+## Lint Code
+
+Lint code option can be used to clean up your code.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FK7dmAZ5hMMyBnGmspizK%2FScreen%20Recording%202025-11-26%20at%2011.14.51%E2%80%AFPM.mp4?alt=media&token=604ec167-10c3-450b-9375-62709a8284aa>" %}
+
+
+# Block types
+
+Code Blocks
+
+Code blocks are the working environment for developers. The blocks can also be interlinked, which allows the user to use the imported libraries, variables, functions, and classes across the blocks.&#x20;
+
+
+# Python
+
+Python support in the notebook environment is robust, offering comprehensive functionality for a variety of projects, including those focused on data science. The notebook is designed to integrate seamlessly with all Python functions, ensuring that users can leverage the full power of Python's capabilities.&#x20;
+
+It features block-level output similar to Jupyter notebooks, providing an intuitive and interactive way to code. However, the notebook offers a more stable environment, reducing the potential for errors and disruptions during complex computations and analyses.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FjREOAfdnTNC5d2c56td8%2FScreenshot%202025-11-26%20at%2011.20.49%E2%80%AFPM.png?alt=media&#x26;token=3f2d9adc-54f2-43ac-9677-26737c18bcfa" alt=""><figcaption><p>Python block</p></figcaption></figure>
+
+For a comprehensive list of supported packages and step-by-step instructions on adding new ones, refer to the official [documentation](https://docs.zerve.ai/guide/canvas-view/installing-packages/requirements). Rest assured, with Python's robust package support, you'll have the tools needed to effectively enhance your coding environment.
+
+
+# Query
+
+Zerve simplifies data access by removing the need for matching driver packages in Python, streamlining workflows for data manipulation and analysis. It supports native SQL query execution, GraphQL for vector database, and database connectivity through Query Blocks, allowing users to execute queries and save the results in a dataframe for use in subsequent operations.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FFue7S2fQdfKJp3vauTtm%2FScreenshot%202025-11-26%20at%2011.28.21%E2%80%AFPM.png?alt=media&#x26;token=b589301d-5267-4ac3-baec-70819dcaa058" alt=""><figcaption></figcaption></figure>
+
+**SQL On Pandas Dataframe:**
+
+Zerve supports utilizing any pandas dataframe as a database source, enabling the execution of SQL queries directly on the dataframe. To leverage this feature, connect a Python block containing a dataframe to an SQL block.&#x20;
+
+This integration allows you to perform SQL queries on the dataframe as if it were a traditional database, enhancing data manipulation and analysis capabilities within Zerve.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FM7GPomKdNBNlHTxSl11p%2FScreenshot%202025-11-26%20at%2011.33.20%E2%80%AFPM.png?alt=media&#x26;token=abc0deb0-f83d-42c4-92af-6f16942be563" alt=""><figcaption></figcaption></figure>
+
+
+# R
+
+R blocks support R code (Default version runs 4.0.4) and a wide range of R package coverage.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNxWvvj7Zh13uocfJnfh7%2FScreenshot%202025-11-26%20at%2011.39.22%E2%80%AFPM.png?alt=media&#x26;token=6683932a-e057-4247-88d2-1442c6559329" alt=""><figcaption><p>R Block</p></figcaption></figure>
+
+
+# Markdown
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F8wkZPnCRgocTUNIg0rhA%2FScreenshot%202025-11-26%20at%2011.53.28%E2%80%AFPM.png?alt=media&#x26;token=02d32624-dd84-4aee-b519-25f5aa9cc7ee" alt=""><figcaption></figcaption></figure>
+
+
+# Gen AI
+
+### Zerve Canvas: Interact with Latest LLMs
+
+Zerve Canvas provides a platform for users to seamlessly interact with the latest LLM models, such as those from Bedrock and OpenAI. By using Jinja templates, users can efficiently pass variables from other blocks to any LLM, enhancing functionality and flexibility in their workflows.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FrMdHCfMvvkfBiS65szvV%2FScreenshot%202025-11-26%20at%2011.59.55%E2%80%AFPM.png?alt=media&#x26;token=01daf16e-d2ca-4914-804c-e292a1e7a87a" alt=""><figcaption></figcaption></figure>
+
+You can also configure Max tokens and Temperature by following the process in the video
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FzwQfbTQAwletepiwLIVo%2FScreen%20Recording%202025-11-28%20at%203.48.51%E2%80%AFPM.mp4?alt=media&token=ec1e0067-554b-4f46-8935-233204999770>" %}
+
+
+# UI Blocks (Input and Output)
+
+These blocks help the user to create an application in the canvas
+
+You can crate an app using the Input and Output blocks.
+
+## Input Block
+
+You can pass input in multiple formats:
+
+* Text Input
+* Number Input
+* Dropdown
+* Multi-select
+* Slider
+* File Upload
+
+The input from this block can be used downstream in your code to transform the data and the output variable that has to be shown in the app can be selected in the output block.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FpYGHLHk8B4EcELiWtWug%2FScreenshot%202025-11-28%20at%2012.05.00%E2%80%AFPM.png?alt=media&#x26;token=eda0ddf2-d108-43fc-be70-23e262fbc8a0" alt=""><figcaption><p>Input Block</p></figcaption></figure>
+
+## Output Block
+
+In the output block, we can select any variables created in the code.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FHD4P5BHjFdx1v8lta9Fk%2FScreenshot%202025-11-28%20at%2012.11.24%E2%80%AFPM.png?alt=media&#x26;token=6d087b1a-1164-4123-837a-1bacd64132ce" alt=""><figcaption><p>Output block</p></figcaption></figure>
+
+
+# Aggregator
+
+Fleets is Zerve's built-in feature for parallel processing. With a single line of code, users can parallelize code to run across multiple blocks.&#x20;
+
+Aggregator block can be used to gather all the result from the parallel runs with gather function and convert to single variable. More information about Fleet is [here](https://docs.zerve.ai/guide/notebook-view/fleets)
+
+
+# Output and Variable
+
+Once a block is run, you will be able to see it's out and the variables created under the block. The following video shows how to access it.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FsIho71eaum4hmbvV5j9e%2FScreen%20Recording%202025-11-27%20at%201.33.45%E2%80%AFPM.mp4?alt=media&token=8f1c495b-611b-4708-a5c7-63779f2cae36>" %}
+
+
+# Block level Security
+
+You have an option to lock a block. Once blocked you will not be able to edit it and the only way to re-run it is by clicking on Force run as you can see in the video below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FFgyy30u2pnqiK8n269El%2FScreen%20Recording%202025-11-27%20at%201.40.25%E2%80%AFPM%20(1).mp4?alt=media&token=e48d19d6-77a4-47dd-92eb-ba98bcd1766a>" %}
+
+Similarly, you can use the option to "Lock up to here" to lock all the blocks until the selected block. You can also use the option "Unlock up to here" to unlock all the blocks until the selected block.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FTN3km6mCw0WLp1b8Ej96%2FScreenshot%202025-11-27%20at%201.41.48%E2%80%AFPM.png?alt=media&#x26;token=fdd21402-4768-48a2-ac25-e97034cd088b" alt=""><figcaption><p>Block Locking Options</p></figcaption></figure>
+
+
+# Language Interoperability
+
+This functionality of Zerve allows users to share the data between two programming languages
+
+The data frame created in either block can be accessed if the connection is established. This feature of Zerve allows the users to have seamless development across languages such as R, Python, and SQL.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FH624XgCIk0RHbu3Fe9Zb%2FScreenshot%202025-11-27%20at%209.57.16%E2%80%AFPM.png?alt=media&#x26;token=0f22bcd9-acf0-4e8d-b15a-4a1b96a84a80" alt=""><figcaption><p>Python to SQL</p></figcaption></figure>
+
+
+# Compute Settings
+
+## Stateful Compute
+
+For code execution zerve uses cloud compute (lambda, fargate, GPU or Kubernetes) at block level. When a block is run, zerve spins up relevant compute resources for code execution.&#x20;
+
+Once successfully executed the results are cached, serialized and stored on disk. This is built on top of a canvas environment for true collaboration and uses DAG workflow to process code execution order.
+
+Post successful code execution data is stored on disk separate from compute. This creates a stable environment to do data science and removes all the shortcomings that we get from a normal jupyter notebook.
+
+
+# Compute Types
+
+## Lambda vs Fargate
+
+Lambda uses AWS lambda to execute code. This is suitable for tasks up to 15 minutes of execution time and has 10GB of memory
+
+Fargate mode lets the user select custom compute CPUs and suitable for long running tasks. This can support CPUs upto 120GB memory.
+
+## **GPU**
+
+Zerve canvas also allow users to select from a range of GPUs with varying performance, memory capacities, and features for heavy compute tasks like training and fine-tuning in deep learning, LLMs  etc.&#x20;
+
+## Kubernetes
+
+Kubernetes mode runs the code on a self-hosted Kubernetes cluster. To run code on a Kubernetes cluster, enable Kubernetes on the Self-Hosting Settings page.
+
+
+# Setting Compute Type
+
+## Comput modes
+
+There are two types of compute modes in Zerve
+
+* **Serverless** - This is the default setting. This is slower as executors would spin up when code run starts and stop once code run finishes.&#x20;
+* **Persistent** - Uses a persistent execution infrastructure rather than short-lived environments like Lambda invocations. This takes around a minute to start, but execution is faster.
+
+## Serverless mode - Set default compute
+
+When you create a new block, by default the compute type is Lambda. You can change this in "Compute Setting" on the left side as shown in the picture below.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FmIMzj8cg5G3KixrUlG1t%2FCompute%20type.png?alt=media&#x26;token=e6fe7ce6-b53f-48ab-850c-83e48c8fb7c8" alt=""><figcaption></figcaption></figure>
+
+## Persistent mode - Setup
+
+In Persistent mode, you only have an option to select Fargate compute. You can select different instance type as per your requirement. It takes about a minute to start which and the status can be seen in the tool bar in the bottom .Following video shows how this can be started and where to monitor it's status. You will see that block run will be much quicker once persistent is selected.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FZPmAtc5NI40NVOJe6ao1%2FPersistent.mp4?alt=media&token=7df65feb-daad-49fa-84cd-a7dba89da22a>" %}
+
+## Set block level compute - Serverless and Persistent
+
+In both Serverless and Persistent compute modes, you can set different compute type for different blocks in Zerve. This allows you to use cheaper Lambda for smaller operations and comparitively expensive CPU/GPU only in places you need them.
+
+The following video shows you can set block level compute
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FZpcTZIQmR9Kt4qcRi1q0%2FCompute%20Settings.mp4?alt=media&token=53164917-5953-46e2-ae97-ec1f53fc2b0e>" %}
+
+
+# Deployment
+
+Zerve enables the process of creating, customizing, and managing APIs for streamlining the development of APIs, making it quicker and more accessible for developers to expose the functionality and data of their applications to other systems, services, or developers.\
+\
+We also provide an option to deploy a Streamlit app
+
+
+# Streamlit Deployment
+
+You can deploy Streamlit apps from Zerve notebooks directly
+
+### Notebook Code
+
+You need to create variables/objects needed in your Streamlit app in a notebook. This can be later reference in the streamlit app code.
+
+For example, in the screenshot below a df called employees is created in a notebook block
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fa2YxgtVoov59ayCHQWFC%2FScreenshot%202026-02-20%20at%202.24.13%E2%80%AFPM.png?alt=media&#x26;token=981d7560-761d-4250-afb8-4a987922d306" alt=""><figcaption></figcaption></figure>
+
+### Referencing variables
+
+To reference a variable/object in the canvas use the following code:
+
+```
+from zerve import variable
+name = variable ("block_name", "variable_name")
+```
+
+In the above example, our block name is employee\_data and the required df is stored as employees. In this example the code to reference the df is:
+
+```
+from zerve import variable
+employees = variable ("employee_data", "employees")
+```
+
+### Instance Type
+
+You can chose any instance type for your deployment.&#x20;
+
+### Example
+
+The following video shows how we can deploy the Streamlit app.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FSW8Q5siai6X8jbqhUi5b%2FStreamit_cut.mp4?alt=media&token=37164c95-a2fc-40ff-9989-2f2459ca512e>" %}
+
+
+# Fast API
+
+You can deploy via Fast API in Zerve
+
+### Code
+
+All your code will be in the Zerve notebook. It will have all variables/objects you want to refer in your deployment.
+
+### FastAPI code
+
+In deployment you will see a generic example script that you can modify as per your requirment. To call a variable from the notebook you can use the following code
+
+```
+from zerve import variable
+name = variable ("block_name", "variable_name")
+```
+
+### Packages
+
+There is a default FastAPI environment set in Zerve that can be used here, but if you need additional packages for deployment, you can clone the FastAPI environment and add required packages to it and build.&#x20;
+
+### Instance Type
+
+You can select any instance type as per your requirement
+
+### Preview
+
+You can see a preview in Zerve before you deploy. This can be used to fix bugs and deploy a clean code.
+
+### Logs
+
+There are also logs available to help you debug better.
+
+### Example flow
+
+Following video shows how to deploy a churn model using Fast API in Zerve.\
+In this example we need scikit-learn package, so we will see all steps from creating a new environment until deployment.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FrAXi3xwaHPYubqYYgqLw%2FFastAPI_Deployment.mp4?alt=media&token=2b1916b6-4419-4b2f-862f-b8c32cb9d76e>" %}
+
+
+# API Methods
+
+## GET Method
+
+GET method requests data from a specified resource without altering the state of the resource or causing any side effects.&#x20;
+
+### **Code Samples for using the API**
+
+**CURL**
+
+```
+// Some code
+curl -X GET https://GETMethod.zerve.cloud/output
+-H "Accept: application/json" \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+**Python**
+
+```python
+// Some code
+import requests
+url = "https://GETMethod.zerve.cloud/output" 
+api_token = "YOUR_API_TOKEN" # Replace with your actual API token
+headers = { "Accept": "application/json", "Authorization": f"Bearer {api_token}" }
+response = requests.get(url, headers=headers)
+if response.status_code == 200:
+    print(response.json())
+else:
+    print(f"Error: {response.status_code}, {response.text}")
+```
+
+#### Postman <a href="#responses" id="responses"></a>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMDROU0c4Y05K1xdJBdqo%2Fpostman.png?alt=media&#x26;token=adda4cbc-afb8-4164-b555-68cf4ee7beb1" alt=""><figcaption><p>GET in Postman</p></figcaption></figure>
+
+## POST Method
+
+POST method is used to send data to the server so it can process it, save it, or perform an action.
+
+### **Code Samples for using the API**
+
+**CURL**
+
+```
+// Some code
+curl -X GET https://ModelAPI.zerve.cloud/classifier
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+**Python**
+
+```python
+// Some code
+import requests
+
+url = 'https://ModelAPI.zerve.cloud/classifier'
+data = {
+    "payload" : {
+    "realSum": [194.033698], 
+    "room_shared": [false], 
+    "room_private": [true],
+    "person_capacity": [2.0]
+    }
+    }
+response = requests.post(url, json=data)
+if response.status_code == 200:
+    print(response.json())
+else:
+    print(f"Error: {response.status_code}, {response.text}")
+
+```
+
+**Postman**
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FDLqyXQPUWevRL5TRz4KY%2FPOST%20METHOD%20IN%20POSTMAN.png?alt=media&#x26;token=12757b54-1ea0-4446-b14b-acef886413ea" alt=""><figcaption><p>POST in Postman</p></figcaption></figure>
+
+### **API Method Responses**
+
+<table><thead><tr><th width="98">Status</th><th width="186">Meaning</th><th>Description</th></tr></thead><tbody><tr><td><strong>200</strong></td><td><strong>OK</strong></td><td>The request was successful, and the server is returning the requested data.</td></tr><tr><td><strong>204</strong></td><td><strong>No Content</strong></td><td>The server successfully processed the request but is not returning any content in the response body. </td></tr><tr><td><strong>400</strong></td><td><strong>Bad Request</strong></td><td>The server could not understand the request. This is usually due to malformed syntax, missing required parameters, or invalid data.</td></tr><tr><td><strong>401</strong></td><td><strong>Unauthorized</strong></td><td>The request requires user authentication.</td></tr><tr><td><strong>403</strong></td><td><strong>Forbidden</strong></td><td>The server understood the request, but the server refuses to authorize it.</td></tr><tr><td><strong>404</strong></td><td><strong>Not Found</strong></td><td>The requested resource could not be found on the server.</td></tr><tr><td><strong>500</strong></td><td><strong>Internal Server Error</strong></td><td>A generic error message indicating that an unexpected condition was encountered on the server (misconfiguration).</td></tr><tr><td><strong>502</strong></td><td> <strong>Bad Gateway</strong></td><td>The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed.</td></tr></tbody></table>
+
+
+# Scheduled Jobs
+
+Each notebook in Zerve has an inbuilt scheduler as part of it. This can be used to run analytics workflows that need to be run at scheduled intervals - hourly/daily/weekly/custom (cron string)
+
+## **Setting up a Scheduled Job:**
+
+Click on Scheduled jobs from Add Layer tab on Development layer.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FyawO9MLsAP9LHJ3C0QZY%2FScreenshot%202025-06-19%20at%2012.31.12%E2%80%AFPM.png?alt=media&#x26;token=204dd55e-1ea1-4a61-85a1-fb6b602ea84f" alt=""><figcaption><p>Select Scheduler</p></figcaption></figure>
+
+Configure scheduler settings and save the schedule job. Scheduled jobs also allows the user to setup email notification to track the successful execution of tasks.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F58z4iADs6771AY7YBO5e%2FScreenshot%202025-06-19%20at%2012.33.37%E2%80%AFPM.png?alt=media&#x26;token=cb7cd9fa-6684-4434-9a95-0324f61d1dd5" alt=""><figcaption><p>Update Scheduler Settings</p></figcaption></figure>
+
+Activate the Scheduler by Clicking Run Job
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fj3N90566UIUucrSz780F%2FScreenshot%202025-06-19%20at%2012.35.07%E2%80%AFPM.png?alt=media&#x26;token=b3d35cde-3b1c-4e25-ba57-e8a87b813c8b" alt=""><figcaption><p>Edit Scheduled Job</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fp09h38cgWEdRKUd87qLP%2FScreenshot%202025-06-19%20at%2012.36.49%E2%80%AFPM.png?alt=media&#x26;token=2e36431f-fb40-4770-8101-83d4afb5dc39" alt=""><figcaption><p>Activate scheduled job layer.</p></figcaption></figure>
+
+Once the scheduled job is activated it is read only. To edit blocks in scheduled layer - deactivate the job to get edit access.
+
+## Check Scheduler Status:
+
+Each scheduled job layer has a tracker that logs the details of each run. If any exception is hit or code error happens during a run on one of the blocks then the job fails. The Scheduled Job Run tracker can be used to identify and fix any errors that might occur.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0PvF11aW3ng0lkv9n6d7%2FScreenshot%202025-06-19%20at%2012.48.15%E2%80%AFPM.png?alt=media&#x26;token=84596820-c430-4925-919f-74da4aac8242" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FuT51LLkap1061pm2F46V%2FScreenshot%202025-06-19%20at%2012.50.11%E2%80%AFPM.png?alt=media&#x26;token=3163a915-eb5a-4423-b988-6e0c4c6032cd" alt=""><figcaption></figcaption></figure>
+
+
+# How Zerve Works
+
+## Execution modes:
+
+### Canvas Level:
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FRh0A6jyqlxyQ0xrb71lS%2FScreenshot%202025-11-27%20at%204.12.23%E2%80%AFPM.png?alt=media&#x26;token=e9e1e1f1-9ddc-4899-ab05-b3f48fbe15ae" alt=""><figcaption></figcaption></figure>
+
+#### **Run All:**
+
+This mode runs all the block from left to right starting from the first unfinished block. (Refer the image above for more info)
+
+#### Force Run All:
+
+This mode will rerun all the blocks from the  first block irrespective of it's run status and replace data outputs. (Refer the image above for more info)
+
+### Block Level:
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6GNgERVVght4UwfePa2o%2FScreenshot%202025-11-27%20at%204.19.55%E2%80%AFPM.png?alt=media&#x26;token=a089c5ed-0c6a-4510-a3e7-101d5270aded" alt=""><figcaption></figcaption></figure>
+
+#### Run this block:
+
+Runs the particular block. This is active only if the block is not run or if there is a code change
+
+#### Run up to here:
+
+Runs all the blocks up to this particular block including the selected block.
+
+#### Run from here:
+
+Runs all the blocks after this particular block including the selected block.
+
+#### Force run this block:
+
+Force executes the block regardless of code state or block state.
+
+#### Force run up to here:
+
+Force executes all the blocks up to the particular block regardless of current state.
+
+#### Force run from here:
+
+Force executes all the blocks from the particular block regardless of current state.
+
+## How code blocks manage data:
+
+Zerve is designed to be serverless and to abstract compute from storage. Once the code execution is done the data - all the variables, functions, dataframes, charts etc are cached, serialized and stored on disk (s3 in this case). This is then passed on to the next block as input for futher code execution.&#x20;
+
+This stored data is separated from the compute and won't be affected by code execution in downstream blocks. &#x20;
+
+## Block states:
+
+### When is a block's data replaced?
+
+When the block execution has been successfully completed.  It is inheriting an integer and a dataframe from upstream, and its code creates an additional integer and makes some changes to the dataframe.  If the user makes changes to the code in the block and re-runs it, the following are the various scenarios on what data will be passed downstream.
+
+#### **Scenario 1: Code changed and run, resulting in an error.**
+
+* Old data remains unless explicitly modified or deleted.
+
+#### **Scenario 2: Code changed but not run.**
+
+* Old data remains unaffected. &#x20;
+
+#### **Scenario 3: Code changed and run, still running.**
+
+* Old data remains unless explicitly modified or deleted.&#x20;
+
+#### **Scenario 4: Code changed, run, and completes successfully.**
+
+* Old data may or may not be replaced by new results, depending on the code's design.&#x20;
+
+
+# Assets
+
+Assets are used for storing functions, queries, constants, secrets, and connections for seamless development.
+
+
+# Functions & Classes
+
+"Functions & Classes" are reusable code snippets that encapsulate specific logic or operations or classes.  This provides code modularity, readability, and reduces duplication.
+
+### Create a Function:
+
+This can be accessed through the create function option under function & classes tab in Assets.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FXDMDvI721bkSbY4ZzF72%2FScreenshot%202025-04-04%20at%201.05.01%E2%80%AFPM.png?alt=media&#x26;token=f4018e6b-20c8-41ae-a1dd-ef34eb966c6e" alt=""><figcaption><p>Creating a function</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FOPGogUPuDjiBK4nO8eub%2FScreenshot%202025-04-04%20at%2012.56.53%E2%80%AFPM.png?alt=media&#x26;token=66e97971-8a7d-4c52-befa-24e267a7235a" alt=""><figcaption><p>Creating a Function</p></figcaption></figure>
+
+There are 4 parts that can be edited once a function is created. First is the function name and versions for tracking.
+
+There are Requirements and Imports that can be used to call certain versions of the library that's required for the function definition to work.
+
+And finally, there is the function definition where python functions and classes can be defined in appropriate syntax.
+
+### Access in Canvas:
+
+The above function can be imported into a canvas by using the Asset Library tab in the canvas. Imported assets are globally available on the canvas and can be accessed from any block.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FxKyGpj2j1yBXn4gvB30V%2FScreen%20Recording%202025-11-27%20at%204.40.47%E2%80%AFPM.mp4?alt=media&token=c0b488e0-75f9-496c-a13f-16149c114a46>" %}
+
+### Share Functions and Classes:
+
+From the asset library tab - based on access level a user can share functions and classes with other team members. This makes sure everyone in the team is using the latest and up to date functions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FWJTrJVdiN8wjvzii9JFt%2FScreenshot%202025-06-19%20at%201.03.16%E2%80%AFPM.png?alt=media&#x26;token=bb3d6702-362b-4b70-b34d-0cccbef8c55e" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FN00gIuTg9Qd4KdSjl7lC%2FScreenshot%202025-06-19%20at%201.04.46%E2%80%AFPM.png?alt=media&#x26;token=d4be48f1-2ba0-4def-8988-e1f2906235f5" alt=""><figcaption></figcaption></figure>
+
+Each version can be tagged as primary, draft, outdated etc. so that team members are always using the up to date version.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FSpHgowjgokuvGU41pzst%2FScreenshot%202025-06-19%20at%201.09.13%E2%80%AFPM.png?alt=media&#x26;token=ce2f8d6d-c613-4412-8093-64242312cdac" alt=""><figcaption></figcaption></figure>
+
+
+# Constants & Secrets
+
+"Constants" are used for unchanging data in code to enhance readability and maintainability, "Secrets" refer to sensitive information that should be protected and not exposed in your code.
+
+### Creating Constants
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FbMDiIHDp7vxGl0DxeUeq%2FScreenshot%202025-06-19%20at%201.12.56%E2%80%AFPM.png?alt=media&#x26;token=7699f13b-3008-4e64-bfb4-10b8d0dfc5fb" alt=""><figcaption><p>Constants</p></figcaption></figure>
+
+Constants within our app are asset functions that are leveraged to use values that do not change during the execution of a program. They are typically used to represent fixed, unchanging data in code, making it easier to manage and understand.
+
+### Importing constants into Canvas
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0fqacLgnqfFhVTwgWXze%2FScreenshot%202025-11-27%20at%204.48.06%E2%80%AFPM.png?alt=media&#x26;token=a22bc0de-f047-4f09-a547-d2828b7637fd" alt=""><figcaption><p>Adding Constants</p></figcaption></figure>
+
+You can attach any asset to a canvas by following the procedure above.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FcRaYFaLiToiOd67nx54H%2FScreenshot%202025-11-27%20at%204.55.01%E2%80%AFPM.png?alt=media&#x26;token=852c49b9-a3dc-4ca8-9bb4-397c91b370ba" alt=""><figcaption></figcaption></figure>
+
+In canvas, the constants are often used as imports within libraries to make commonly used values available to users of the library in a convenient and consistent way.
+
+### Creating Secret Constants
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FgCBlyYfgN93OTJdLK4Km%2FScreenshot%202025-06-19%20at%201.21.31%E2%80%AFPM.png?alt=media&#x26;token=c58c7255-6f56-4f25-a9f9-0d709142c284" alt=""><figcaption><p>Secret Constants</p></figcaption></figure>
+
+Secret constants are essential for accessing sensitive data such as API keys, passwords, access tokens and other confidential data that a program or application needs for execution. This can be easily achieved by using "make secret" or "Secret" option while or after creating the constant.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FvlIkvzXefxBmwGaAlJC0%2FScreenshot%202025-06-19%20at%201.21.48%E2%80%AFPM.png?alt=media&#x26;token=7c4f9e9c-272a-4b32-9b38-0e6d68935b7b" alt=""><figcaption><p>Hiding Secret Key</p></figcaption></figure>
+
+Secrets within asset function can utilize anonymization of the confidential data in canvas for seamless coding experience among team members in an organization.
+
+
+# Connections
+
+Zerve offers support to integrate with popular database solutions which can be queried directly from canvas and can be used across different blocks/languages.
+
+Currently Zerve supports the following database connections with others following soon.
+
+1. Snowflake
+2. PostgreSQL
+3. MySQL
+4. MariaDB
+5. BigQuery
+6. Weaviate
+
+## Setting up a Connection:
+
+1. Go to Assets -> Connections -> Create Connections from your Zerve account's home page.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FBudVGcnnqok3IDlFNn1O%2Fimage.png?alt=media&#x26;token=cdd20d82-3ea3-48da-994b-d0bb2528176a" alt=""><figcaption><p>connection setup</p></figcaption></figure>
+
+2. Select the required connection to setup and add the necessary connection parameters.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FLgsoMMTdzVyWRuxveGrn%2Fimage.png?alt=media&#x26;token=3712f8dd-2d84-464c-8092-91b211569de6" alt=""><figcaption><p>snowflake connection setup</p></figcaption></figure>
+
+3. Once saved this connection can be accessed from SQL blocks in each canvas.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQSPkfoFhXaFbNZ7di7nh%2Fimage.png?alt=media&#x26;token=671ea799-f547-4deb-8839-8224e5de7752" alt=""><figcaption><p>add connection asset to canvas</p></figcaption></figure>
+
+4. Access the connection from SQL Block and store the queried table as df.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FT9Ifq1MxvK7Mjg2e9ru5%2Fimage.png?alt=media&#x26;token=4943db1b-3f99-42a8-87c3-f202c65126e4" alt=""><figcaption><p>connect from sql block</p></figcaption></figure>
+
+5. Snowflake SQL query is executed and the result is stored as a dataframe in df variable.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FDs5vAymxqn6E5hEY4ccC%2Fimage.png?alt=media&#x26;token=a72a8afb-666a-4c01-a17f-a2e12486fe93" alt=""><figcaption><p>full screen mode of SQL Query</p></figcaption></figure>
+
+This variable is now available for downstream python blocks as an input variable.&#x20;
+
+
+# AI Agent
+
+The AI Agent in Zerve is your supercharged coding and data assistant, designed to help you build, debug, and optimize AI and data workflows seamlessly within the Zerve canvas.
+
+You can describe what you need, whether it is a new workflow, a fix for a broken block, or a change to logic. The agent builds it directly in your workspace. There is no switching tools and no vague suggestions. What sets Zerve apart is the context the agents have.\
+\
+They understand your pipelines, your data, and your intent. They write code, connect components, fix logic, test their own changes, and create the infrastructure needed to run everything they build.
+
+You can work with one agent or have several collaborating at once. They operate inside the Zerve Canvas, where you can see their plans, make adjustments, or let them complete complex tasks on their own. This setup allows for faster development, smoother debugging, and scalable execution without extra tooling or infrastructure overhead.
+
+Zerve's AI agent can do three main actions : Chat, Search & Code. The agent intelligently routes to one of these functions depending on the task at hand.
+
+To initiate a chat with agent click on the AI Assistance icon on bottom right of the canvas as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FGFgxrFz7Yw5KX0fl2xxm%2FAgent.png?alt=media&#x26;token=c163d160-5358-49bf-a578-6f4420dcc3cd" alt=""><figcaption><p>Initializing a chat</p></figcaption></figure>
+
+To give context to the agent, you upload a file , use voice-to-text or simply write on chat. To use voice-to-text please provide microphone access.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FL1Oale9XXVKe8zmJkNSp%2FScreenshot%202025-06-13%20at%2010.49.19%E2%80%AFAM.png?alt=media&#x26;token=f2af1ce3-e501-41a3-bec6-8334b28b93d7" alt=""><figcaption></figcaption></figure>
+
+
+# Chat
+
+The agent aware of the context of the canvas. Once you initiate the AI agent, it will give you some suggestions based on the content of the canvas. You can click on one of them or give new instructions. ***All the chats are private to the user and are not shared.***
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQNF1Rw0vVU0uDySSSrOG%2Fimage.png?alt=media&token=550e585d-bbf4-495a-9139-8ba824904eb8>" %}
+Suggestions based on the content of canvas
+{% endembed %}
+
+You can start a new chat or view chat history by clicking on the icon as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fn9W5rcvkHFDTDnyiKlUD%2FScreenshot%202025-06-13%20at%2011.10.35%E2%80%AFAM.png?alt=media&#x26;token=3f9cfaff-ddf2-4783-a0f4-6520ba21277e" alt=""><figcaption><p>Cretae new chat or view chat history</p></figcaption></figure>
+
+You can also rename a chat to ease of review. First you should click on **Chat History** as shown above then rename as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F73Qv0pnNTHS7yW7qnwgq%2Fimage%20(2).png?alt=media&#x26;token=ab8fe739-b838-4f8e-b87b-6b7646fcd5ef" alt=""><figcaption></figcaption></figure>
+
+
+# Search
+
+Agent can search the internet for you based on your input
+
+You can ask the agent to search the web on your request. You can ask it to search for data sources, templates etc. Anything that is beyond the context of the canvas will be searched on the internet as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fh0UOZKiuDG8WzJOxnw3f%2Fimage%20(3).png?alt=media&#x26;token=739158b9-4823-4abf-8441-19931d402915" alt=""><figcaption><p>Search</p></figcaption></figure>
+
+
+# Code
+
+Zerve's AI agent is aware of the context and working of the canvas, this enables it to work more efficiently and create better results.&#x20;
+
+While coding the agent can create add run blocks, add requirements and edges.&#x20;
+
+Before starting a coding process, the agent will present you with Milestone, Summary, Required Inputs, Anticipated Future Milestones and Tickets. Post this you can accept this plan or ask the agent to make changes. Once you are satisfied with the plan you can ask the agent to proceed. Each ticket that can be run in parallel will be assigned to a coding agent. If it faces an error, it will work on fixing it. The video below shows an example of how the agent can help with coding.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FtenjX7TPIspqsNROdHy4%2FScreen%20Recording%202025-11-27%20at%209.34.16%E2%80%AFPM.mp4?alt=media&token=a2f68feb-aa66-4f8d-ade1-c5830c512db0>" %}
+
+The agent can help with debugging existing code as well. You can click on **Open Error Assist**. The video below shows an example process.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FuOw5lpclpNXdp3dK4012%2FScreen%20Recording%202025-11-27%20at%209.44.03%E2%80%AFPM.mp4?alt=media&token=30de1e0a-292d-4b7c-b5cf-6243b976ad92>" %}
+
+### AI Agent Capabilities
+
+The AI Agent in Zerve is designed to support you throughout your development journey with a broad range of powerful features:
+
+* **Code Generation:** Automatically generates clean, modular, and production-ready code snippets for Python, SQL, R, and more, tailored to your project context.
+* **Workflow Design:** Helps you create, edit, and optimize data and AI workflows visually on the Zerve canvas, promoting best practices like modularity and parallel execution.
+* **Data Integration Assistance:** Advises on how to connect and query various data sources like Snowflake, Redshift, PostgreSQL, and others within your workflows.
+* **Generative AI Support:** Implements GenAI prompts for summarization, extraction, and text generation tasks seamlessly integrated into workflows.
+* **Debugging & Optimization:** Suggests improvements, identifies potential errors, and helps you refactor code for better scalability and resilience.
+* **Context Awareness:** Understands your canvas context, including layers, blocks, and existing variables, to provide relevant and non-conflicting suggestions.
+* **Parallel Execution Guidance:** Helps you leverage Zerve’s fleet capabilities to run tasks in parallel and aggregate results efficiently.
+* **API & Deployment Support:** Guides you through creating API endpoints, SageMaker deployments, and managing compute environments.
+
+With these capabilities, the AI Agent enhances your productivity, reduces manual effort, and ensures you build high-quality AI and data solutions on Zerve with ease.
+
+
+# Best Practices
+
+### How to Use
+
+* **Ask Questions:** Pose conceptual questions or seek tips and best practices.
+* **Request Code:** Get help writing or refactoring code blocks, designing workflows, or creating integrations.
+* **Automate Tasks:** Automate manual or repetitive tasks with AI-powered workflows.
+
+### Best Practices
+
+* Keep your questions clear and specific for the best responses.
+* Leverage the AI Agent's suggestions but review generated code for your unique requirements.
+* Combine AI Agent capabilities with Zerve's parallel execution and modular design to build efficient, scalable solutions.
+
+
+# Fleets
+
+Fleets is Zerve's built-in feature for parallel processing. With a single line of code, users can parallelize code to run across multiple blocks.
+
+Fleets in Zerve provide an easy-to-use parallel processing feature. By leveraging the `spread()` function, you can initialize parallel tasks with a simple Python command. The `spread()` function takes a list as input, fanning out multiple compute blocks corresponding to each element of the list. After execution, the `gather()` function collects all results into a list for subsequent processing.
+
+### **ML Pipeline in Fleets:**
+
+\
+Parallel processing in Zerve's fleets can significantly enhance the efficiency of building machine learning (ML) pipelines. Once data processing is complete, multiple algorithms can be applied simultaneously to different subsets of data. This approach allows data scientists to explore various ML models in parallel, quickly identifying which algorithms yield the best results for a given dataset.
+
+Hyperparameter tuning, an essential step in optimizing ML models, can also benefit greatly from the parallel processing capabilities of fleets. By running hyperparameter tuning in fleets, multiple combinations of parameters can be tested simultaneously. This not only speeds up the process but also helps in discovering the most effective configuration to enhance model performance across varied datasets.
+
+In the screenshots below, we will see how Fleet can be used in ML pipeline
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FvTmpxtnzsbCnJ5aD7aNW%2FScreenshot%202025-11-27%20at%2011.10.36%E2%80%AFPM.png?alt=media&#x26;token=e2f49573-f7e8-43d2-8a6b-297aa7cbcdec" alt=""><figcaption><p>Setting up hyperparamter grid</p></figcaption></figure>
+
+Now we can use the spread function to launch fleet
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FO1QsICoxZIkHHKxbtruM%2FScreenshot%202025-11-27%20at%2011.13.25%E2%80%AFPM.png?alt=media&#x26;token=db991abd-99c0-49ff-9038-9483ae8d94ee" alt=""><figcaption><p>Pass Parameters to Spread Function</p></figcaption></figure>
+
+Next we run the model for each parameter combination.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FJgRafyHrWarMHDViEXbM%2FScreenshot%202025-11-27%20at%2011.16.31%E2%80%AFPM.png?alt=media&#x26;token=10e90b0d-cd47-426a-8f83-884b0f9f6472" alt=""><figcaption><p>27 Concurrent Runs Initialized - One for each Hyper Parameter Combination</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FyVodYTGknQR23mk1F7sP%2FScreenshot%202025-11-27%20at%2011.18.32%E2%80%AFPM.png?alt=media&#x26;token=6d64d58f-bef2-4d01-863b-070eb5052165" alt=""><figcaption><p>Use Aggregator block to combine all results</p></figcaption></figure>
+
+You can use the best parameters to re-train your model.
+
+### Data Processing with Fleets:
+
+Fleets in Zerve also enable faster data processing by allowing category-level processing within a dataset column. For instance, when dealing with large datasets that contain categorical variables, fleets can process each category in parallel. This strategy reduces processing time substantially, enabling quicker insights and data-driven decisions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FtHEGn9WLhrKVm0Npkn5g%2FScreenshot%202025-11-28%20at%202.46.44%E2%80%AFPM.png?alt=media&#x26;token=9172fc7d-a318-496c-9f0d-7baa72b85b25" alt=""><figcaption><p>Setup department list for data processing</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FAopCR5VflddrfIq3qGwq%2FScreenshot%202025-11-28%20at%202.48.55%E2%80%AFPM.png?alt=media&#x26;token=0b7e709f-1f50-4742-a042-8e9772e22cf2" alt=""><figcaption><p>Data processing with 5 concurrent runs</p></figcaption></figure>
+
+### LLM Evaluation with Fleets:
+
+Furthermore, testing large language models (LLMs) with multiple prompts across different models can become significantly more efficient using fleets. By distributing the workload across different compute blocks, teams can evaluate LLMs against a variety of inputs in a fraction of the time it would take to perform sequential testing. This parallel approach not only saves time but also provides a more comprehensive understanding of how different models perform under diverse conditions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FLEwgz9tfZNhlhJs3Bl3a%2FScreenshot%202025-11-28%20at%202.58.00%E2%80%AFPM.png?alt=media&#x26;token=5780c1dc-999d-431e-bd46-11c641dd0084" alt=""><figcaption><p>Create a list of Product Descriptions</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fvr7T5GBSRwgOfpp9cION%2FScreenshot%202025-11-28%20at%202.58.13%E2%80%AFPM.png?alt=media&#x26;token=2dc47d26-3932-4896-af3a-853fe07b8d6d" alt=""><figcaption><p>Pass it to 5 concurrent LLM requests for processing</p></figcaption></figure>
+
+
+# Navigating Your Canvas
+
+This section is for exploring different functionalities of canvas
+
+Canvas is the central development environment designed to streamline and enhance the process of project development.
+
+Top open canvas mode, click on the three dots next to your project and click "Open as Canvas" option.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FdohDs0BEVGqFd0lRmDUx%2FScreenshot%202025-12-02%20at%2012.21.22%E2%80%AFPM.png?alt=media&#x26;token=6ed1b613-0ff9-4b41-a5fb-fff5e4069068" alt=""><figcaption></figcaption></figure>
+
+
+# Creating a Canvas
+
+To commence a new project, please initiate the "Create Canvas" action, which will establish a fresh development environment tailored specifically for the project's requirements.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FltG1up4GginBLQOf6mEc%2FCreate%20canvas.mp4?alt=media&token=4ce9f3ba-0f99-43a4-812a-bb8b2e107713>" %}
+
+
+# My Canvases
+
+The canvas view in the my canvases section can be adjusted according to the user's preference. The different views are show below:
+
+## List View
+
+List view offers Linear Presentation, Information Density, Sequential Scrolling, Efficient Use of Vertical Space, and Readability of canvases.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F96YjCMX8pQljzW6rAdzw%2FScreenshot%202025-08-29%20at%2011.53.03%E2%80%AFAM.png?alt=media&#x26;token=593363c7-a113-4bcd-a3c7-e4eb38afad43" alt=""><figcaption></figcaption></figure>
+
+## Grid View
+
+Grid view offers Visual Presentation, Visual Appeal, Efficient Use of Space, Quick Scanning, and Thumbnail Previews of canvases. This can be accessed from top right of your screen as highlighted below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F81QM2nnnY4ebCtPShFSl%2FScreenshot%202025-08-29%20at%2011.39.26%E2%80%AFAM.png?alt=media&#x26;token=947f4b0c-fa61-422c-85ff-6039cc03d473" alt=""><figcaption></figcaption></figure>
+
+## Navigating from canvas to home
+
+You can navigate from the canvas you are working on to home page (where all your canvases are present) by clicking on the Zerve icon as shown below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FBz78Jrjf2xkmXTE1tAR8%2FNavigate.mp4?alt=media&token=30b9b591-3cae-4ec4-85e6-9e633298ef2f>" %}
+
+
+# Edit and Sort
+
+One can also edit the canvas title from the home page, sort, and access by title, created date, etc.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fl8Z52vtnSS1ebm04dptM%2FSort.png?alt=media&#x26;token=6683376c-d30b-44a2-9fc2-cd759f72b1b9" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Ff7Y3XTX2foio0XpBrELD%2FEdit.png?alt=media&#x26;token=02bf1e77-9068-408f-9cbb-3226a57b6444" alt=""><figcaption></figcaption></figure>
+
+
+# Shared with me
+
+The "Shared with Me" option is a feature designed to streamline collaboration and content sharing among users.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FZuKZqBDSmLORvAFOEeqJ%2FShared.png?alt=media&#x26;token=850da481-b980-4134-9b5f-e8d1d0ae37cf" alt=""><figcaption></figcaption></figure>
+
+
+# Starred
+
+Starred canvas allows the users to bookmark or highlight specific content for quick access, reference, or prioritization.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMm4bRWWHjRn1Dn1BFc6F%2FStarred.mp4?alt=media&token=ca18b5b3-ed03-4e1a-9009-c282eef70baf>" %}
+
+
+# Layers Overview
+
+Layers are used for arranging blocks as individual workflows. Each canvas can be set up to contain multiple workflows of same/different types for different parts of a data science problem.
+
+Canvas offers four layer types: Development (Default layer), Deployment (API), Scheduled Jobs and AWS SageMaker Deployments.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FJkKuOoGonz0lG6flNY62%2FScreenshot%202025-03-27%20at%203.26.49%E2%80%AFPM.png?alt=media&#x26;token=abde6ca9-e194-460f-b692-06b8790158a3" alt=""><figcaption><p>Layers</p></figcaption></figure>
+
+
+# Development
+
+The IDE Layer. Development layer is similar to any scripting environment - Jupyter or datascience Coding IDE - but better.
+
+This is the layer where all the coding - data prep, model development, model evaluation etc. happens. Currently supports Python, R, SQL, GraphQL, Markdown, RMarkdown, GenAI Prompts
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FGPo0ZMC2MOnxKw7I08bl%2FScreen%20Recording%202025-03-27%20at%203.36.10%E2%80%AFPM.mp4?alt=media&token=8976eb43-e89b-4966-9160-22425a2010bd>" %}
+Development Layer
+{% endembed %}
+
+## **Grouping Blocks:**
+
+Development layer has an inbuilt grouping option to group cells based on code functionality. This can be done by renaming the block to groupName.blockName. This will group all the blocks with same group name together. In the below example we can see data as a group name.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FihBjGisfvXqJRozjJqLO%2FScreen%20Recording%202025-03-27%20at%203.48.09%E2%80%AFPM.mp4?alt=media&token=1c687bd1-6372-4a36-af6f-cbb4b6efcb02>" %}
+Grouping blocks
+{% endembed %}
+
+## **Passing Functions:**
+
+Along with variables one can also pass functions between blocks as shown below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FoB6Yy0gl0UbiEoarPhQ3%2FMy%20Movie%201.mp4?alt=media&token=69a480e8-61e1-4c03-aed3-2aa971ee7826>" %}
+Passing Functions
+{% endembed %}
+
+
+# Deployment
+
+API builder allows developers to define endpoints, map data structures, set up authentication and authorization mechanisms, and generate documentation for their APIs.
+
+Zerve enables the process of creating, customizing, and managing APIs for streamlining the development of APIs, making it quicker and more accessible for developers to expose the functionality and data of their applications to other systems, services, or developers.
+
+
+# Create Deployment
+
+There are 3 components to setup a deployment in Zerve - API Controller, API Route and the code blocks to execute as part of the deployment.
+
+## API Controller
+
+An API controller is a central component within the API layer that manages key functions and information related to its APIs.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FPGUd9TaLCOQe4YK98LDv%2FAPI%20Builder.png?alt=media&#x26;token=985d9774-4af7-4ab8-aeaa-e3577df2a3d1" alt=""><figcaption><p>API Controller Setup</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F1uIXMaShNweN1HjKgogJ%2FScreenshot%202025-06-19%20at%2011.39.49%E2%80%AFAM.png?alt=media&#x26;token=d137a876-ebf8-442a-8cd8-15a1adc38877" alt=""><figcaption><p>API Configuration</p></figcaption></figure>
+
+**API Address**: The controllers provide endpoints through which clients can access the managed APIs.
+
+**API Key**: They handle API key management, enabling developers to generate, distribute, and revoke API keys for authentication and access control.
+
+**Files**: API controllers manage files associated with API requests and responses.
+
+**Customizable Options Offered by API Controller**:
+
+* **Compute Type**: Choose between Lambda or Fargate for your computing needs.
+* **Compute Memory**: Configure the memory allocation for optimized performance.
+
+## API Route
+
+API routes correspond to HTTP methods such as GET, POST, PUT, and DELETE. Developers typically define these routes within the API's configuration or routing system.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fp5wx4OWPJ7EwSRDosF8v%2FScreenshot%202025-06-19%20at%2011.43.50%E2%80%AFAM.png?alt=media&#x26;token=247c0f7a-5fc6-48e3-a56b-3046ca22fa17" alt=""><figcaption><p>API Route Block</p></figcaption></figure>
+
+Route Configuration:
+
+Setup route name and method of the route.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FXrX8tiZeVWVgPlu03rVj%2FScreenshot%202025-06-19%20at%2011.45.16%E2%80%AFAM.png?alt=media&#x26;token=b64fdb94-c22e-449f-a856-0bcde2f3d443" alt=""><figcaption></figcaption></figure>
+
+**Data Validation**:&#x20;
+
+Data validation involves checking incoming data for correctness, completeness through payload validation and response filtering, guarding against potential security vulnerabilities.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FckM9ykIStNAXZWgpblC7%2FScreenshot%202025-06-19%20at%2011.46.03%E2%80%AFAM.png?alt=media&#x26;token=abd515c6-73be-4804-aea7-8fcc7e160fa2" alt=""><figcaption></figcaption></figure>
+
+**Test:**\
+Add test payload - sample data to test the deployment code.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMGDjJciWdRFF14vZrnyN%2FScreenshot%202025-06-19%20at%2011.46.44%E2%80%AFAM.png?alt=media&#x26;token=46788adf-57e6-4693-9def-42b87c28e29c" alt=""><figcaption></figcaption></figure>
+
+## Setting up Deployment:
+
+Once model training is completed users can connect the trained model to deployment layer as shown below.
+
+1. Add an API Controller block in API layer and setup required configurations - DNS name and API Key.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FYW3N6t3LnrrBVncsJZvX%2FScreenshot%202025-06-19%20at%2011.50.27%E2%80%AFAM.png?alt=media&#x26;token=3d916777-fc80-4894-bb46-c8c2fce3b91c" alt=""><figcaption></figcaption></figure>
+
+2. Connect API controller to Route block and edit the configuration with Route Name to predict and Method to POST for predictions.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FrU4iWYSCIb5HK1of3bss%2FScreenshot%202025-06-19%20at%2011.55.46%E2%80%AFAM.png?alt=media&#x26;token=e90357b8-e19e-4a32-9269-e64f72453734" alt=""><figcaption></figcaption></figure>
+
+3. Setup data validation to specify the expected data input format.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FoVE68w1iWosyliYeQsrQ%2FScreenshot%202025-06-19%20at%2011.56.39%E2%80%AFAM.png?alt=media&#x26;token=904b54c5-c17d-4de8-a771-89dcc29fe2a3" alt=""><figcaption></figcaption></figure>
+
+4. Add example test data to run test predictions and validate deployment code. This should contain all the necessary variables required for the model to generate predictions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fl0DNT9qvWfkWFNIsY0LA%2FScreenshot%202025-06-19%20at%2011.58.24%E2%80%AFAM.png?alt=media&#x26;token=e8318883-7d7e-4c7e-9346-c194eac21d47" alt=""><figcaption></figcaption></figure>
+
+5. Here you can get either cURL or Python code for post-deployement
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6TjgSuLLrJJ8XHgZDAm5%2FScreenshot%202025-06-19%20at%2011.59.37%E2%80%AFAM.png?alt=media&#x26;token=c3a3b21f-7013-4452-8264-7434ecb8a8d2" alt=""><figcaption></figcaption></figure>
+
+6. Add the prediction code that is required to run deployment predictions. In this layer users can reference the model variable from the development layer.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMYeP5wEC3BDDdXo0aWiK%2Fimage.png?alt=media&#x26;token=518e7329-c0c0-4a36-98a0-7f77047460e0" alt=""><figcaption><p>Attach Variable Section</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FzgQbegfoEXJP94B9x3HC%2FScreenshot%202025-06-19%20at%2012.04.06%E2%80%AFPM.png?alt=media&#x26;token=e9d2e737-4beb-4ae7-a833-41a0e12feee4" alt=""><figcaption><p>Select the model variable needed for prediction</p></figcaption></figure>
+
+7. Deploy the model to zerve hosted API layer.
+8.
+
+```
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fp2oVz2MAn6u5VyQ4nBSj%2FScreenshot%202025-06-19%20at%2012.07.46%E2%80%AFPM.png?alt=media&#x26;token=977cfcc9-394a-4915-9f2f-57a6fd9bbdc8" alt=""><figcaption></figcaption></figure>
+```
+
+This can be accessed via the configured API address - <https://zerveai.zerve.cloud/predict>
+
+## Redeployment:
+
+Since the API Layer is connected to the development layer any changes to the model can be easily pushed to the APIs. Once the retraining is completed users can simply redeploy the API as shown above and the latest model version will be used for predictions. This is made possible by the variable attachment process from Step 5 above.&#x20;
+
+## Logs:
+
+For all the deployments users have access to both deployment logs and runtime logs to track errors and deployment usage.
+
+
+# Download Deployment
+
+When accessing the deployed API in Canvas, the user also has the option to download its corresponding source code onto their local system. This download comprises four distinct sections, which are as follows:
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fe2JUghNVv37EiPdidMZ7%2FScreenshot%202025-06-19%20at%2012.09.07%E2%80%AFPM.png?alt=media&#x26;token=51b8522d-9e32-471d-81c1-1e67d95e77bd" alt=""><figcaption><p>API Download Source</p></figcaption></figure>
+
+## App
+
+This section of the download will consist of contents ranging from access files to API codes pertaining to deployed API.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F5WolT3VEBbtij0pMvJuk%2Fdownload_deployment_app_5.png?alt=media&#x26;token=08d2943f-ba1a-45d6-95fe-824351123b9f" alt=""><figcaption></figcaption></figure>
+
+## yaml and Docker file
+
+The second file in the download is the yaml that serves as configuration file that defines various aspects of setup and environment for deploying API in the docker.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6oZtQRJLzz9MJbsBFzpi%2Fdownload_deployment_yml_4.png?alt=media&#x26;token=0f05f186-4947-431a-b0bc-48d78cb006c6" alt=""><figcaption><p>yaml file</p></figcaption></figure>
+
+The third file in the download is the Docker extension that consists of commands to build image and execute code pertaining to running API within the docker environment.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FiGQd8TBAUvm2Mh7LuQ1a%2Fdownload_deployment_dock_3.png?alt=media&#x26;token=5403fefd-38e0-46fc-9833-46f4a8df51da" alt=""><figcaption><p>Docker file</p></figcaption></figure>
+
+## Requirements
+
+The last and fourth section of the download is a text file comprising of required library for deployment and execution of API.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FuyuMwOMADvVsux34P0Ey%2Fdownload_deployment_req_2.png?alt=media&#x26;token=35535b2c-fae4-4bb0-9567-ad0526b5d38f" alt=""><figcaption><p>Requirements</p></figcaption></figure>
+
+
+# API Methods
+
+## GET Method
+
+GET method requests data from a specified resource without altering the state of the resource or causing any side effects.&#x20;
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQQnGS7MwR8euVDip3a5p%2FGET%20method.png?alt=media&#x26;token=ba9861af-2f7b-4183-b5a1-8113d10db1a0" alt=""><figcaption><p><strong>GET Method</strong></p></figcaption></figure>
+
+### **Deployment Details**
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FdK3vN9hXB9fW48nE9Vs7%2Fdepolyment%20details.png?alt=media&#x26;token=3215be39-0ee9-43b6-9635-37287cb90b93" alt="" width="244"><figcaption><p><strong>GET Deployment Details</strong></p></figcaption></figure>
+
+### **Code Samples for using the API**
+
+**CURL**
+
+```
+// Some code
+curl -X GET https://GETMethod.zerve.cloud/output
+-H "Accept: application/json" \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+**Python**
+
+```python
+// Some code
+import requests
+url = "https://GETMethod.zerve.cloud/output" 
+api_token = "YOUR_API_TOKEN" # Replace with your actual API token
+headers = { "Accept": "application/json", "Authorization": f"Bearer {api_token}" }
+response = requests.get(url, headers=headers)
+if response.status_code == 200:
+    print(response.json())
+else:
+    print(f"Error: {response.status_code}, {response.text}")
+```
+
+#### Postman <a href="#responses" id="responses"></a>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMDROU0c4Y05K1xdJBdqo%2Fpostman.png?alt=media&#x26;token=adda4cbc-afb8-4164-b555-68cf4ee7beb1" alt=""><figcaption><p>GET in Postman</p></figcaption></figure>
+
+## POST Method
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FsO3yvauBcddh8gzjLfDI%2FPOST.png?alt=media&#x26;token=27a48d1b-541c-47e2-ae73-77cd9650396e" alt=""><figcaption><p>POST Method</p></figcaption></figure>
+
+### **Deployment Details**
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMnYJh71yGSabrnFmV2C4%2FPOST%20deployment%20details.png?alt=media&#x26;token=4f48c1e2-8925-4df5-99fd-fd674459ee74" alt="" width="242"><figcaption><p>GET <strong>Deployment Details</strong></p></figcaption></figure>
+
+### **Code Samples for using the API**
+
+**CURL**
+
+```
+// Some code
+curl -X GET https://ModelAPI.zerve.cloud/classifier
+-H "Content-Type: application/json" \
+-H "Accept: application/json" \
+-H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```
+
+**Python**
+
+```python
+// Some code
+import requests
+
+url = 'https://ModelAPI.zerve.cloud/classifier'
+data = {
+    "payload" : {
+    "realSum": [194.033698], 
+    "room_shared": [false], 
+    "room_private": [true],
+    "person_capacity": [2.0]
+    }
+    }
+response = requests.post(url, json=data)
+if response.status_code == 200:
+    print(response.json())
+else:
+    print(f"Error: {response.status_code}, {response.text}")
+
+```
+
+**Postman**
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FDLqyXQPUWevRL5TRz4KY%2FPOST%20METHOD%20IN%20POSTMAN.png?alt=media&#x26;token=12757b54-1ea0-4446-b14b-acef886413ea" alt=""><figcaption><p>POST in Postman</p></figcaption></figure>
+
+### **API Method Responses**
+
+<table><thead><tr><th width="98">Status</th><th width="186">Meaning</th><th>Description</th></tr></thead><tbody><tr><td><strong>200</strong></td><td><strong>OK</strong></td><td>The request was successful, and the server is returning the requested data.</td></tr><tr><td><strong>204</strong></td><td><strong>No Content</strong></td><td>The server successfully processed the request but is not returning any content in the response body. </td></tr><tr><td><strong>400</strong></td><td><strong>Bad Request</strong></td><td>The server could not understand the request. This is usually due to malformed syntax, missing required parameters, or invalid data.</td></tr><tr><td><strong>401</strong></td><td><strong>Unauthorized</strong></td><td>The request requires user authentication.</td></tr><tr><td><strong>403</strong></td><td><strong>Forbidden</strong></td><td>The server understood the request, but the server refuses to authorize it.</td></tr><tr><td><strong>404</strong></td><td><strong>Not Found</strong></td><td>The requested resource could not be found on the server.</td></tr><tr><td><strong>500</strong></td><td><strong>Internal Server Error</strong></td><td>A generic error message indicating that an unexpected condition was encountered on the server (misconfiguration).</td></tr><tr><td><strong>502</strong></td><td> <strong>Bad Gateway</strong></td><td>The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed.</td></tr></tbody></table>
+
+
+# Scheduled Jobs
+
+Each canvas in Zerve has an inbuilt scheduler as part of it. This can be used to run analytics workflows that need to be run at scheduled intervals - hourly/daily/weekly/custom (cron string)
+
+## **Setting up a Scheduled Job:**
+
+Click on Scheduled jobs from Add Layer tab on Development layer.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FyawO9MLsAP9LHJ3C0QZY%2FScreenshot%202025-06-19%20at%2012.31.12%E2%80%AFPM.png?alt=media&#x26;token=204dd55e-1ea1-4a61-85a1-fb6b602ea84f" alt=""><figcaption><p>Select Scheduler</p></figcaption></figure>
+
+Configure scheduler settings and save the schedule job. Scheduled jobs also allows the user to setup email notification to track the successful execution of tasks.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F58z4iADs6771AY7YBO5e%2FScreenshot%202025-06-19%20at%2012.33.37%E2%80%AFPM.png?alt=media&#x26;token=cb7cd9fa-6684-4434-9a95-0324f61d1dd5" alt=""><figcaption><p>Update Scheduler Settings</p></figcaption></figure>
+
+Activate the Scheduler by Clicking Run Job
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fj3N90566UIUucrSz780F%2FScreenshot%202025-06-19%20at%2012.35.07%E2%80%AFPM.png?alt=media&#x26;token=b3d35cde-3b1c-4e25-ba57-e8a87b813c8b" alt=""><figcaption><p>Edit Scheduled Job</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fp09h38cgWEdRKUd87qLP%2FScreenshot%202025-06-19%20at%2012.36.49%E2%80%AFPM.png?alt=media&#x26;token=2e36431f-fb40-4770-8101-83d4afb5dc39" alt=""><figcaption><p>Activate scheduled job layer.</p></figcaption></figure>
+
+Once the scheduled job is activated it is read only. To edit blocks in scheduled layer - deactivate the job to get edit access.
+
+## Check Scheduler Status:
+
+Each scheduled job layer has a tracker that logs the details of each run. If any exception is hit or code error happens during a run on one of the blocks then the job fails. The Scheduled Job Run tracker can be used to identify and fix any errors that might occur.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0PvF11aW3ng0lkv9n6d7%2FScreenshot%202025-06-19%20at%2012.48.15%E2%80%AFPM.png?alt=media&#x26;token=84596820-c430-4925-919f-74da4aac8242" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FuT51LLkap1061pm2F46V%2FScreenshot%202025-06-19%20at%2012.50.11%E2%80%AFPM.png?alt=media&#x26;token=3163a915-eb5a-4423-b988-6e0c4c6032cd" alt=""><figcaption></figcaption></figure>
+
+
+# Files
+
+File system is the storage space for all the files required to create, run and execute the canvas.
+
+## Import .py files as modules into the Canvas Block:
+
+Zerve's file system functionality includes the ability for users to seamlessly import .py files as modules within the designated block, enhancing flexibility and modularization in coding practices.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FUmtOLZaEB7FS0Sz08NH9%2FScreenshot%202025-06-19%20at%2012.57.48%E2%80%AFPM.png?alt=media&#x26;token=31cbdd9f-a2d9-4c6f-9e85-3612879e4e02" alt=""><figcaption></figcaption></figure>
+
+
+# Storing Files
+
+Canvas file system is a dynamic environment to store files of any type with a specified size limit.
+
+## How Zerve stores files:
+
+The file system in zerve uses S3 for storage and supports uploading of almost all the file types. It supports uploading of files up to 10GB in the base plan.&#x20;
+
+## Upload files:
+
+Users can drag and drop a file into the canvas or browse files using explorer.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FxrEgn7ka6bvW7d7VdIkZ%2FScreen%20Recording%202025-03-27%20at%205.47.39%E2%80%AFPM.mp4?alt=media&token=c4ad0721-03d7-40e8-929f-34f81c94c093>" %}
+Uploading files
+{% endembed %}
+
+
+# Import Files
+
+Once the file is uploaded, it can be accessed in the Python or R blocks, and the files can be of any type.
+
+Below are a couple of examples of accessing files such as a CSV, and JSON in the Python and R blocks
+
+**CSV files**
+
+CSV files can be imported into Python block by using the syntax below as dataframe. This supports all the file types supported by pandas
+
+```python
+import pandas as pd
+df = pd.read_csv("housing.csv")
+```
+
+Similarly the following syntax can be used for R
+
+```r
+file = "housing.csv"
+df = read.csv(file)
+```
+
+**Accessing JSON**
+
+JSON files can also be accessed from the file system in Python or R block.
+
+```python
+import json
+
+# Open and read the raw content of the file
+with open('./testdata.json', 'r') as json_file:
+    content = json_file.read()
+
+# Print the first few characters to understand the structure
+print("First 500 characters of the file:")
+print(content[:500])  # Adjust the number as needed for better understanding
+
+# Check if the content contains multiple JSON objects
+try:
+    data = json.loads(content)
+    print("Single JSON object loaded successfully.")
+except json.JSONDecodeError as e:
+    print(f"JSONDecodeError: {e}")
+    
+    # Possible handling for multiple JSON objects:
+    # Assuming the objects are newline-separated
+    segments = content.splitlines()  # Split by lines (change the delimiter if needed)
+    parsed_data = []
+    
+    for segment in segments:
+        if segment.strip():  # Skip empty lines
+            try:
+                parsed_data.append(json.loads(segment))
+            except json.JSONDecodeError as segment_error:
+                print(f"Failed to parse segment: {segment_error}")
+
+    print(f"Parsed {len(parsed_data)} JSON objects/segments successfully.")
+
+    # For demonstration purposes, let's print the parsed objects
+    for i, obj in enumerate(parsed_data):
+        print(f"Object {i+1}: {obj}")
+
+```
+
+Syntax to access json in R
+
+```r
+# Load required package
+library(jsonlite)
+
+# Read the raw content of the file
+file_path <- './testdata.json'
+content <- readLines(file_path, warn = FALSE)
+
+# Print the first few characters to understand the structure
+cat("First 500 characters of the file:\n")
+cat(substr(paste(content, collapse = "\n"), 1, 500), "\n\n")
+
+# Attempt to parse the content as a single JSON object
+try({
+  data <- fromJSON(paste(content, collapse = "\n"))
+  cat("Single JSON object loaded successfully.\n")
+  print(data)
+}, silent = TRUE)
+
+# Handling multiple JSON objects scenario
+segments <- unlist(strsplit(paste(content, collapse = "\n"), "\n"))
+
+parsed_data <- list()
+for (i in seq_along(segments)) {
+  segment <- segments[i]
+  if (nchar(trimws(segment)) > 0) { # Skip empty lines
+    try({
+      parsed_data[[i]] <- fromJSON(segment)
+    }, silent = TRUE)
+  }
+}
+
+cat("Parsed", le
+```
+
+
+# Download Files
+
+The files can also be seamlessly downloaded into file system from Python or R blocks.
+
+## **Download into File system**
+
+Python Syntax for downloading file a file into file system
+
+```python
+import requests
+
+# URL of the Iris dataset
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+file_path = "./iris_dataset.csv"  # Desired local file path
+
+# Send an HTTP GET request to the URL
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Open a local file with write-binary ('wb') mode
+    with open(file_path, 'wb') as file:
+        # Write the content to the local file
+        file.write(response.content)
+    print(f"File downloaded successfully and saved as {file_path}")
+else:
+    print(f"Failed to download the file. HTTP status code: {response.status_code}")
+
+```
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FSB7sx1W4K3oecjuHy1fr%2FScreen%20Recording%202025-03-27%20at%205.53.47%E2%80%AFPM.mp4?alt=media&token=fd510b45-896a-41d7-8a06-eb21bfd477f5>" %}
+Downloading file using Python
+{% endembed %}
+
+R Syntax for downloading file a file into file system
+
+```r
+# URL of the Iris dataset
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+file_path <- "./iris_dataset.csv"  # Desired local file path
+
+# Download the file
+download.file(url, file_path, method = "auto")
+
+# Check if the file was downloaded
+if (file.exists(file_path)) {
+  cat("File downloaded successfully and saved as", file_path, "\n")
+} else {
+  cat("Failed to download the file.\n")
+}
+
+```
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fnbdq1T4PtqHMrdVqk65A%2FMy%20Movie%201.mp4?alt=media&token=a803aba9-6bc9-4d45-87a3-3df6d0ba9002>" %}
+Downloading file using R
+{% endembed %}
+
+## **Download from File system**
+
+The files from file system can also be downloaded into the local machine.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNegy7Iwq0N5CxIzHvNwY%2FScreenshot%202025-03-27%20at%206.01.06%E2%80%AFPM.png?alt=media&#x26;token=4f11dbaa-5386-476f-850b-f6e174c5d13b" alt=""><figcaption><p>Download file without code</p></figcaption></figure>
+
+
+# Deleting Files
+
+The zerve's canvas offers different ways to delete a file from file system
+
+## Deleting single file
+
+The file can be deleted from the canvas UI using delete file option upon right clicking the file.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FIezDtQaQxgNFZhvl6OyU%2FScreenshot%202025-03-27%20at%206.03.18%E2%80%AFPM.png?alt=media&#x26;token=cdf30783-cbfa-4a8a-aa8b-4e609a9b94a9" alt=""><figcaption><p>Deleting file without code</p></figcaption></figure>
+
+## Deleting multiple files
+
+The multiple blocks can be deleted from the file system through Python or R block
+
+Python syntax for deleting multiple files
+
+```python
+import os
+import glob
+
+# Specify the directory path
+directory_path = "./"  # Replace with your directory path
+
+# Use glob to find all files in the directory
+files = glob.glob(os.path.join(directory_path, "*"))  # '*' matches all files
+
+# Loop through the files and delete each one
+for file_path in files:
+    try:
+        os.remove(file_path)
+        print(f"Deleted: {file_path}")
+    except Exception as e:
+        print(f"Failed to delete {file_path}. Reason: {e}")
+
+# Optional: Check if the directory is now empty
+remaining_files = os.listdir(directory_path)
+if not remaining_files:
+    print("The directory is now empty.")
+else:
+    print(f"Remaining files in the directory: {remaining_files}")
+
+```
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FyStsrHQF1IPGeC4iXCkE%2FScreen%20Recording%202025-03-27%20at%206.07.22%E2%80%AFPM.mp4?alt=media&token=da9c487c-d88d-4fc6-96b3-9c055a97ce87>" %}
+Deleting file using Python
+{% endembed %}
+
+R syntax for deleting multiple blocks
+
+```r
+# Specify the directory path
+directory_path <- "./"  # Replace with your directory path
+
+# List all files in the directory
+files <- list.files(directory_path, full.names = TRUE)
+
+# Loop through the files and delete each one
+for (file_path in files) {
+  if (file.remove(file_path)) {
+    cat("Deleted:", file_path, "\n")
+  } else {
+    cat("Failed to delete:", file_path, "\n")
+  }
+}
+
+# Optional: Check if the directory is now empty
+remaining_files <- list.files(directory_path)
+if (length(remaining_files) == 0) {
+  cat("The directory is now empty.\n")
+} else {
+  cat("Remaining files in the directory:", remaining_files, "\n")
+}
+
+```
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FPa8zRyPSHy1NSuqjQ7ve%2FScreen%20Recording%202025-03-27%20at%206.11.34%E2%80%AFPM.mp4?alt=media&token=15a9ccd6-306c-4385-8b7c-8922bb776f42>" %}
+Deleting files using R
+{% endembed %}
+
+
+# Files in Folder
+
+The imported files can also be organized by creating a folder within the file system. Same thing can be done for files you save.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FCwVo7J3NzfmfvHFwpRa8%2FScreenshot%202025-03-27%20at%206.14.25%E2%80%AFPM.png?alt=media&#x26;token=697cd975-7983-496f-8875-653a5aa6d51b" alt=""><figcaption><p>Folder within file system</p></figcaption></figure>
+
+
+# Installing Packages
+
+User can install Python, Linux and R packages by using the Environment feature.
+
+Environment can contain multiple Requirements. Requirements are the set of packages that are required for the project. You can find the environments option as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FsxCcuBiHX2HGhBBytZbL%2FEnvironments.png?alt=media&#x26;token=0d50ad3e-1014-45c3-990e-b8e3517f7de8" alt=""><figcaption></figcaption></figure>
+
+## Navigating Environments
+
+Each Requirement under Environment has three sections \
+1\. Python/R package\
+2\. Linux Packages\
+3\. Environment Variables
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FNMyjNfsyCjoOnj7KJEud%2FNavigating%20Environments.png?alt=media&#x26;token=b85158f0-db90-40b4-82b6-37f3918ed912" alt=""><figcaption></figcaption></figure>
+
+## Importing Requirements
+
+Any requirement build from another notebook in the same Folder can be reused. Once you import a new requirement, it will build. Once done you will have an option to activate it. Below video shows how you can reuse requirements.&#x20;
+
+There are many requirements available when you open a Notebook, you can activate any of these requirements to start.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FTcnmlAfDH3leJCao5BtR%2FImport%20environment.mp4?alt=media&token=84560080-db4f-4bd0-9b28-d8f760855445>" %}
+
+## Creating New Environment and Installing Packages
+
+You can also create another environment as well. Following video shows how.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FD3AZtDdDyp37xmonn6HT%2FNew%20environment.mp4?alt=media&token=bdf03b15-8afe-4874-8da8-67fbbf6b8043>" %}
+
+## Specify package version
+
+User can specify a particular version of the package. You can add Python, R and Linux packages using the same process.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0DUnNw63fRbWaI72lWMi%2FScreenshot%202025-11-28%20at%203.36.34%E2%80%AFPM.png?alt=media&#x26;token=69ad1468-f26f-4a52-9027-b7877dbd8cdd" alt=""><figcaption><p>Package version</p></figcaption></figure>
+
+
+# Requirements
+
+By default, zerve canvas run in containers with Python 3.11.1, and a number of pre-installed packages. The user has the option to add new packages, new python versions, etc. from the requirements tab.
+
+## What are requirements?
+
+Inside each Canvas you can install the packages that are required to execute a particular project. This means each canvas has an equivalent of a venv that can be customized - no more issues with package version conflicts or reinstalling python.&#x20;
+
+There is a set of commonly used packages pre-installed for the user to get started.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FERB12fphg31pWleZYyF2%2FScreen%20Recording%202025-03-28%20at%2011.32.47%E2%80%AFAM.mp4?alt=media&token=10664239-28de-402f-b9af-e834d4cf47a2>" %}
+Pre-installed packages
+{% endembed %}
+
+## Adding custom package
+
+Additionally, users have the option to install libraries of their choice. Canvas facilitates this by allowing users to add and configure the version of the library beforehand. This capability enables users to tailor their environment to their specific requirements and preferences.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fy2LDNM8gDjS8v6PKg8wr%2FMy%20Movie%201.mp4?alt=media&token=9a592c42-c848-497d-a6cb-996a23805c40>" %}
+Adding custom package
+{% endembed %}
+
+## Specifying Library Versions
+
+To ensure compatibility and stability, users can specify the exact version of the library they wish to install. This is crucial for avoiding potential conflicts or issues that may arise from using different versions of the same library.
+
+The requirement interface within Canvas where the user can add or configure libraries in the version placeholder.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fhbav1eoy4jDNj6ipHaBI%2FMy%20Movie%201.mp4?alt=media&token=56c70693-4feb-4174-a859-7971312a4e39>" %}
+Specifying package version
+{% endembed %}
+
+## Adding Linux packages
+
+The user can also install Linux package in the Linux packages section. Below is an example of Linux package for OpenCV to the canvas requirements and building the env. By default, the latest version is installed.&#x20;
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F3bji4ZoCfIfYbYPy8p0B%2FScreen%20Recording%202025-03-28%20at%202.13.15%E2%80%AFPM.mp4?alt=media&token=95ce29e4-52d5-46ef-90c8-61a4bf5c4eb1>" %}
+Adding Linux packages
+{% endembed %}
+
+## Adding environment variable
+
+In certain instances, packages may necessitate a specific path for downloading data or configuring the environment or setting up environment for GPU usage. To accommodate this, Canvas Zerve provides users with the option to specify a path for packages during installation. This feature empowers users to setup the path using custom environment variables, ensuring flexibility and compatibility with various setups.
+
+## Environment Variable for configuration setup
+
+The first example use case of environment variable is, setting up the path for matplotlib configuration.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fo7wstFMpAjJGYtiSPbwv%2FMy%20Movie%201.mp4?alt=media&token=e16cba87-d4db-4ebb-b246-d13870eab933>" %}
+Configuration environment for Matplotlib
+{% endembed %}
+
+## Environment Variable for dependencies download
+
+The second example use is setting up the path to download dependencies installation for NLTK package.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F8B80lchAijahQ3Enq7a7%2FMy%20Movie%201.mp4?alt=media&token=ad96b744-3932-43ac-8c2d-900f2a27cbf0>" %}
+Adding Environment Variable path
+{% endembed %}
+
+
+# Global Imports
+
+Imports done under each code block will work only inside it. Users can add a package or function to Global Imports section to make it available across all the blocks in the canvas.
+
+## How to set global import commands
+
+Accessing a package via Global Import
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQYhUaqgCQfnRxvnhBCJw%2FScreen%20Recording%202025-04-04%20at%2010.57.49%E2%80%AFAM.mp4?alt=media&token=76d208e4-37fc-4d52-81c6-93ba0c167269>" %}
+Global Import
+{% endembed %}
+
+Accessing a package across all the blocks through Global Imports
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FkgZ93EwVtLRLQeKeZB4E%2FScreen%20Recording%202025-04-04%20at%2011.09.51%E2%80%AFAM.mp4?alt=media&token=722107a5-00b7-47ae-928e-e8c9f44f7dc8>" %}
+Accessing Global Import across blocks
+{% endembed %}
+
+## How to set local, block-level import commands
+
+For larger packages like pytorch - which are required to be run only on specific blocks - we can use block level imports.&#x20;
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F4yA6sHEMD3pXApMIVCHQ%2FScreen%20Recording%202025-04-04%20at%2011.30.07%E2%80%AFAM.mp4?alt=media&token=293b15e7-fbdd-4fc4-9d51-5d30451e3bcc>" %}
+Block level Import
+{% endembed %}
+
+
+# Blocks and Connections
+
+## Block
+
+A Block is the IDE (Integrated Development Environment) for the coding. Though it is similar to other IDEs yet it has the luxury of executing the codes hassle-free.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FXsPyOla1pHJosR8mtBdA%2FScreen%20Recording%202025-03-25%20at%201.13.27%E2%80%AFPM.mp4?alt=media&token=5b6818be-cdb9-4798-9d84-bf624553c805>" %}
+Blocks
+{% endembed %}
+
+## Auto naming blocks
+
+Auto-naming of the block typically refers to generating meaningful names for variables, functions, classes, or other elements in your code automatically, often based on specific rules or patterns. This can help improve code readability and maintainability.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Ft9Fj6nYFet9efkOIUAV1%2FScreenshot%202025-03-25%20at%201.22.16%E2%80%AFPM.png?alt=media&#x26;token=2fce4f9d-cf24-4dba-82e4-23734de653dd" alt=""><figcaption><p>Auto naming</p></figcaption></figure>
+
+## Connection
+
+Although the blocks are independent, a connection can be established between them through the connection portal (yellow dot on both sides) of each block. This will let the user access the components of connected blocks such as variables, libraries, functions, classes, etc. to use in other blocks.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FdWINUiaKCY8ztnYyISo3%2FScreen%20Recording%202025-03-25%20at%201.26.42%E2%80%AFPM.mp4?alt=media&token=3afbe475-4fe1-4608-a831-2f0d2052e0df>" %}
+Connection
+{% endembed %}
+
+## **Display Block Name in Zoom Out**
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0x39HFCdx877IaOADSOW%2FScreen%20Recording%202025-03-25%20at%201.30.37%E2%80%AFPM.mp4?alt=media&token=64fb34d5-6e2e-4521-acc6-21d8d16c3786>" %}
+Display name while zoomed out
+{% endembed %}
+
+## Block Split
+
+In programming and code execution, it is often necessary to control the flow of instructions by using blocks of code. These blocks can be thought of as self-contained units of logic that perform specific tasks or operations. Sometimes, it is desirable to split a block into two separate blocks while ensuring that the last active line of the original block is passed on to the subsequent blocks.
+
+By ensuring that the last active line is seamlessly transitioned to the subsequent blocks, developers can build more modular and maintainable code, which is crucial for large and complex software projects. However, it's worth noting that in some cases, when there's only one line in the block, splitting it may leave the first block empty.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F2XPGyKkIkt5hrDG1nxg7%2FScreen%20Recording%202025-03-25%20at%202.04.33%E2%80%AFPM.mp4?alt=media&token=37c89728-4441-4ac6-a46c-8e6430d89689>" %}
+Block Split
+{% endembed %}
+
+## Lint Code
+
+Lint code option can be used to clean up your code.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FuI3VmDRZnT7QhG5GvFKu%2FLint.mp4?alt=media&token=984e0074-75ea-415b-9231-0cbb77999d75>" %}
+Lint Code
+{% endembed %}
+
+## Zoom Block
+
+You can Zoom into your active block by following the steps as shown in video
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fx9HUAqERJ0LZJOiOgXn8%2FZoom.mp4?alt=media&token=9ed59502-978b-4717-b90a-ea0ae033e6e4>" %}
+
+
+# Block types
+
+Code Blocks
+
+Code blocks are the working environment for developers. The blocks can also be interlinked, which allows the user to use the imported libraries, variables, functions, and classes across the blocks.&#x20;
+
+
+# Python
+
+Python support in the canvas environment is robust, offering comprehensive functionality for a variety of projects, including those focused on data science. The canvas is designed to integrate seamlessly with all Python functions, ensuring that users can leverage the full power of Python's capabilities.&#x20;
+
+It features block-level output similar to Jupyter notebooks, providing an intuitive and interactive way to code. However, the canvas offers a more stable environment, reducing the potential for errors and disruptions during complex computations and analyses.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FozZo8CBHuwgGZWY0NRib%2FScreenshot%202025-03-25%20at%202.43.42%E2%80%AFPM.png?alt=media&#x26;token=8145029e-b29f-4b9a-8f12-f1f27eb2acf1" alt=""><figcaption><p>Python block</p></figcaption></figure>
+
+To learn how to integrate a new package into the canvas, follow the detailed guide provided. Python blocks offer compatibility with Python 3, supporting an extensive array of Python packages.&#x20;
+
+For a comprehensive list of supported packages and step-by-step instructions on adding new ones, refer to the official [documentation](https://docs.zerve.ai/guide/canvas-view/installing-packages/requirements). Rest assured, with Python's robust package support, you'll have the tools needed to effectively enhance your coding environment.
+
+
+# Query
+
+Zerve simplifies data access by removing the need for matching driver packages in Python, streamlining workflows for data manipulation and analysis. It supports native SQL query execution, GraphQL for vector database, and database connectivity through Query Blocks, allowing users to execute queries and save the results in a dataframe for use in subsequent operations.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fg1UmYxrZ6TtI8K9XXJDY%2Fimage.png?alt=media&#x26;token=4a7a34f9-5962-44aa-adce-95261a2e6c1b" alt=""><figcaption></figcaption></figure>
+
+**SQL On Pandas Dataframe:**
+
+Zerve supports utilizing any pandas dataframe as a database source, enabling the execution of SQL queries directly on the dataframe. To leverage this feature, connect a Python block containing a dataframe to an SQL block.&#x20;
+
+This integration allows you to perform SQL queries on the dataframe as if it were a traditional database, enhancing data manipulation and analysis capabilities within Zerve.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FHN76HU2ovFmbO97jlm8x%2Fimage.png?alt=media&#x26;token=eb4620b9-eff7-4117-afd6-693420ad0dab" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FVV8qumNC2R4htf3AwYcK%2Fimage.png?alt=media&#x26;token=519b7160-3f1e-423e-b4e2-71a939863cd1" alt=""><figcaption></figcaption></figure>
+
+
+# R
+
+R blocks support R code (Default version runs 4.0.4) and a wide range of R package coverage.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fp3VtbPLS4RB45HebXxyP%2FScreenshot%202025-03-26%20at%2010.47.26%E2%80%AFAM.png?alt=media&#x26;token=efebbb35-e60e-4b94-97ac-a3d4d69cafc0" alt=""><figcaption><p>R Block</p></figcaption></figure>
+
+
+# Markdown
+
+Zerve markdown block supports native markdown language support which includes object types like HTML, images, links etc.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FeG0S9IEZbMrHOnLHHYoI%2FScreenshot%202025-03-26%20at%2011.08.54%E2%80%AFAM.png?alt=media&#x26;token=94ba989a-90dd-4d39-9679-dd2b86ef717a" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FC6KF3ZzVTXIvPrbkE0eW%2FScreenshot%202025-03-26%20at%2011.09.05%E2%80%AFAM.png?alt=media&#x26;token=cbe7530f-8e68-4709-876b-0c9db24b61f7" alt=""><figcaption></figcaption></figure>
+
+
+# Gen AI
+
+GenAI blocks can be used to connect to LLMs on Bedrock/OpenAI making it suitable for various applications, including text generation, summarization, translation, text to image, and more.
+
+This is integrated off the shelf with Zerve Canvas and can be used for analytics workflows out of the box. Read more about Bedrock here - <https://aws.amazon.com/bedrock/>
+
+## List of Models supported
+
+The GenAI block supports the following models
+
+<table><thead><tr><th width="240">Model Name</th><th width="396">Version</th><th>Output Type</th></tr></thead><tbody><tr><td>Titan Text Large</td><td>amazon.titan-tg1-large</td><td>Text</td></tr><tr><td>Titan Image Generator G1</td><td>amazon.titan-image ganerator-v1</td><td>Image</td></tr><tr><td>Titan Text G1 - Lite</td><td>amazon.titan-text-lite-vt</td><td>Text</td></tr><tr><td>Titan Text G1 - Express</td><td>amazon.titan-text-express-vi</td><td>Text</td></tr><tr><td>SDXL 0.8</td><td>stability.stable-diffusion-xl</td><td>Image</td></tr><tr><td>SDXL 0.8</td><td>stability.stable-diffusion-xl-v0</td><td>Image</td></tr><tr><td>SDXL 1.0</td><td>stability.stable-diffusion-xl-v1</td><td>Image</td></tr><tr><td>J2 Grande Instruct</td><td>ai21.j2-grande-instruct</td><td>Text</td></tr><tr><td>J2 Jumbo Instruct</td><td>ai21.j2-jumbo-instruct</td><td>Text</td></tr><tr><td>Jurassic-2 Mid</td><td>ai21.j2-mid</td><td>Text</td></tr><tr><td>Jurassic-2 Mid</td><td>ai21.j2-mid-v1</td><td>Text</td></tr><tr><td>Jurassic-2 Ultra</td><td>ai21.j2-ultra</td><td>Text</td></tr><tr><td>Jurassic-2 Ultra</td><td>ai21.j2-ultra-v1</td><td>Text</td></tr><tr><td>Claude Instant</td><td>anthropic.claude-instant-v1</td><td>Text</td></tr><tr><td>Claude</td><td>anthropic.claude-v2:1</td><td>Text</td></tr><tr><td>Claude</td><td>anthropic.claude-v2</td><td>Text</td></tr><tr><td>Claude 3 Sonnet</td><td>anthropic.claude-3- sonnet-20240229-v1:0</td><td>Text</td></tr><tr><td>Claude 3 Haiku</td><td>anthropic.claude-3- sonnet-hlku-20240507-v1:0</td><td>Text</td></tr><tr><td>Command</td><td>cohere.command-text-v14</td><td>Text</td></tr><tr><td>Command Light</td><td>cohere.command-light-text-v14</td><td>Text</td></tr><tr><td>Lama 2 Chat 13B</td><td>meta.lama2-13B-chat-v1</td><td>Text</td></tr><tr><td>Lama 2 Chat 70B</td><td>meta.lama2-70B-chat-v1</td><td>Text</td></tr><tr><td>Llama 3 8B Instruct</td><td>meta.lama3-8B-instruct-v1:0</td><td>Text</td></tr><tr><td>Llama 3 70B Instruct</td><td>meta.lama3-70B-instruct-v1:0</td><td>Text</td></tr><tr><td>Mistral 7B Instruct</td><td>mistral.mistral-7B-instruct-v0:2</td><td>Text</td></tr><tr><td>Mixtral 8x7B Instruct</td><td>mistral.mixtral-8x7b-instruct-v0:1</td><td>Text</td></tr><tr><td>Mistral Large</td><td>mistral.mistral-large-2402-v1:0</td><td>Text</td></tr><tr><td>All OpenAI Models</td><td>as per api</td><td>Text</td></tr></tbody></table>
+
+GenAI can be used in two distinct ways.
+
+## Usage
+
+&#x20;The first involves passing prompts within the prompt block to generate output
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FWJyIOEj0YXTNzEXplC6B%2FScreenshot%202025-04-04%20at%2012.13.28%E2%80%AFPM.png?alt=media&#x26;token=81696c9f-7f80-4995-858f-a533eeb59aaa" alt=""><figcaption><p>Prompt</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FIbuEG2954BhunEO2xsVz%2FScreenshot%202025-04-04%20at%2012.14.39%E2%80%AFPM.png?alt=media&#x26;token=1ef2463b-c5b3-4507-8a7e-00b8a4c9b18d" alt=""><figcaption><p>Output</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FFIB47RKkroIB0FvzTdVZ%2FScreenshot%202025-04-04%20at%2012.39.40%E2%80%AFPM.png?alt=media&#x26;token=9bafc471-7cc9-4516-9ad5-63650bc54151" alt=""><figcaption><p>Prompt to Image</p></figcaption></figure>
+
+## Using Variable
+
+Additionally, the prompt blocks can be linked with a Python layer, allowing input to be passed as a variable from Python blocks to the prompt blocks. This makes it easier to use Gen AI as part of existing analytics workflows without complex agent integrations.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FzEVJYKxGS144lE1C6yn2%2FScreenshot%202025-04-04%20at%2012.47.22%E2%80%AFPM.png?alt=media&#x26;token=fa610001-d5db-42d8-98fb-f343e6025608" alt=""><figcaption><p>Variable to text</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FhnPHULB2wGETGWlIeasb%2FScreenshot%202025-04-04%20at%2012.44.21%E2%80%AFPM.png?alt=media&#x26;token=ac8a2c7f-1dee-4098-b6d6-b578be9c57c5" alt=""><figcaption><p>Variable to Image</p></figcaption></figure>
+
+### System Prompt:
+
+The “system prompt” is a prompt or instruction provided to the model before any user interaction occurs. It sets the context, tone, or guidelines for how the model should behave during the conversation. This prompt helps to ensure that the model responds in a manner consistent with the desired role or objective throughout the interaction.&#x20;
+
+By default bedrock blocks are enabled with the following system prompt.
+
+```python
+Messages = (
+    "You are a data science assistant with great coding skills. "
+    "Your prompts originate from a code block in a directed acyclic graph of connected code blocks.  "
+    "You have access to the code used to generate variables you have access to the content and a description of each variable.  "
+    "If the user asks about their code, other blocks or variables answer as directly as possible with best practices for machine learning and datascience deployments in mind.  "
+    "If the user asks about a variable, provide the value of the variable."
+    "Make sure to take additional variables into account but ignore them if your not asked about them"
+    "If an answer is more verbose, please provide it in markdown syntax with headings and lists. "
+    "If it is possible to answer accurately with a single statement or string, particularly for non-abstract concepts such as the value of a variable or the content of code, prefer this.  "
+    "Keep the suggestions short if possible."
+    "Do not give the block IDs in your output"
+    "If you are tasked with image generation, please strictly generate an image related to the prompt.  "
+    "If you are tasked with image generation, use only the variables or code referred to in the prompt below, ignore any variables or code not referred to, directly or indrectly, below."
+)
+```
+
+
+# R Markdown
+
+Zerve’s R Markdown block enables users to integrate and execute R code within their analytics environment, facilitating the creation and publication of dynamic, interactive reports.
+
+Drag and Drop R Markdown Block: On the right side of the canvas workspace, you will find the Add Block panel. Locate the R Markdown block and drag it onto your canvas. This block allows you to write and run R code. Code Entry: In the R Markdown block, you can write R code within designated code chunks. These chunks are encapsulated by three backticks followed by {r} at the start and three backticks at the end.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FLPgJzmRtQlgpumkTo2tM%2FR%20markdown%20step%201.png?alt=media&#x26;token=b2c0ecf4-0b25-4948-9ba7-35da038ec554" alt=""><figcaption><p>R Markdown</p></figcaption></figure>
+
+To execute the R code, click the Run button at the top right of the block. The code output, which can include text, tables, and visualizations, will be displayed within the block. After running your code and generating the desired output, save the report by using publish report option in the bottom dropdown. This action updates the report with the latest changes and results.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQ0zmK4TjQlYg0AcNOYem%2FR%20mardown%20step%202.png?alt=media&#x26;token=823aef22-0646-4cac-a509-61ee22272cb6" alt=""><figcaption><p>Publishing Report</p></figcaption></figure>
+
+Post publishing use the Reports menu in the options within organization section to share or export your report.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F1Vs83Ejl9OOJzykNS0Vu%2FR%20markdown%20step%203.png?alt=media&#x26;token=df2b9491-1fe5-4878-90c7-f8fdcb26d399" alt=""><figcaption><p>Report option</p></figcaption></figure>
+
+By following these steps, you can effectively utilize Zerve’s R Markdown block to enhance your data analysis workflow, creating comprehensive reports that integrate narrative, code, and results seamlessly.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FouoJJujwkrrRhlP15aoP%2FR%20markdown%20step%204.png?alt=media&#x26;token=23acaacc-8d46-49c5-a5ca-94d9feb8532d" alt=""><figcaption><p>Published Report</p></figcaption></figure>
+
+Upon clicking the link, the report can be viewed as shown in the below gif.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FdQMEZjBS5tCTSeIbE182%2FR%20markdown%205.gif?alt=media&#x26;token=40ff6123-4d61-4a23-9d94-95efd2119e37" alt=""><figcaption><p>Published Report View</p></figcaption></figure>
+
+
+# UI Blocks (Input and Output)
+
+These blocks help the user to create an application in the canvas
+
+You can crate an app using the Input and Output blocks.
+
+You can pass input in multiple formats:
+
+* Text Input
+* Number Input
+* Dropdown
+* Multi-select
+* Slider
+* File Upload
+
+The input from this block can be used downstream in your code to transform the data and the output variable that has to be shown in the app can be selected in the output block.
+
+## Example Use-case
+
+In the following recording we are passing the variable Department using the Input block.  Then we filter our employee data using these variables then, we create summary stats which we give to GenAI block to create a summary.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FgTotA2FJW93Lh2t1lDOn%2FInput%20Output.mp4?alt=media&token=d139a183-cbcc-4f1a-a14a-0294d3ae8fb2>" %}
+
+
+# Aggregator
+
+Fleets is Zerve's built-in feature for parallel processing. With a single line of code, users can parallelize code to run across multiple blocks.&#x20;
+
+Aggregator block can be used to gather all the result from the parallel runs with gather function and convert to single variable. More information about Fleet is [here](https://docs.zerve.ai/guide/canvas-view/fleets)
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F22iySENaHehqsgHVEthv%2FGather.png?alt=media&#x26;token=f80f0fbb-3165-434b-ad3c-09f99a53fd73" alt=""><figcaption></figcaption></figure>
+
+
+# Logic Gate
+
+Logic gate block can be used to set a condition and only when the condyion is met the downstream blocks will be run. Logic gate takes only variables as input.
+
+## Example
+
+In the following example we will ask a question and and score the relevance of the question to New York's taxi trip. If the relevance score is greater than or equal to 5 we will follow a particular flow. If the score is less than 5, we will follow a particular flow. If a condition is not met then the downstream blocks will not run.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F5Uc0zT8rSE01jlg8pKNI%2FLogic%20Gate.mp4?alt=media&token=dd098a36-7955-4cd1-9fbf-57acde24ce9a>" %}
+
+
+# Code and Variable Mode
+
+Selecting the "code and variable" option under each block will take the selected block to code and variable mode.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FjFmNmU5aJlcyZnsxX4TW%2Fimage.png?alt=media&#x26;token=81d78a09-d78f-4835-ab53-3a432cf22fbd" alt=""><figcaption><p>Important Sections of code and variable mode</p></figcaption></figure>
+
+## Elements of Code and Variable Mode
+
+In code and variable mode, the user can access the input variables going into a block and the list of variables, plots, dataframes coming out of the block as outputs. There is an inbuilt viewer for dataframes (~~df.head()~~ 👋) and plots for quick access.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FmvdhCTSbL8xX7OQ5oiDP%2FScreen%20Recording%202025-03-26%20at%201.39.08%E2%80%AFPM.mp4?alt=media&token=a1b291c6-02af-4b84-b8e6-fe1eec80771d>" %}
+Input and output variables
+{% endembed %}
+
+As seen in the gif below, block\_a and block\_b are connected and you can use the output of block\_a in block\_b, but you can also use output from block\_c by attaching variables as shown below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F0b8Bt269wRQNk9x8zjZa%2FScreen%20Recording%202025-03-26%20at%201.44.58%E2%80%AFPM.mp4?alt=media&token=3dfb457b-b929-41c7-ae0e-943957d9c6fa>" %}
+Attach variable
+{% endembed %}
+
+## Block Toggle
+
+You can move to either previous or next block from within code and variable mode. You can refer the video below for the same.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FhtJ4Yp4meLxqLiVyMeu6%2FView%20Toggle.mp4?alt=media&token=4b0453eb-0acf-4334-afcd-16c5625317c7>" %}
+Block toggle
+{% endembed %}
+
+
+# Block level Security
+
+You have an option to lock a block. Once blocked you will not be able to edit it and the only way to re-run it is by clicking on Force run as you can see in the video below.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F3WAlLZ9b9PMqTE6meZ9j%2FScreen%20Recording%202025-03-26%20at%204.21.40%E2%80%AFPM.mp4?alt=media&token=6c6f1acb-1834-4a7c-9f36-89b4b199de8f>" %}
+Lock a block
+{% endembed %}
+
+Similarly, you can use the option to "Lock up to here" to lock all the blocks until the selected block. You can also use the option "Unlock up to here" to unlock all the blocks until the selected block.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fef0Eme81NbAZe3bTHBmu%2FScreenshot%202025-03-26%20at%204.30.06%E2%80%AFPM.png?alt=media&#x26;token=f0723a37-e200-4d70-a35b-62a72fa8d98c" alt=""><figcaption><p>Block Locking Options</p></figcaption></figure>
+
+
+# Language Interoperability
+
+This functionality of Zerve allows users to share the data between two programming languages
+
+The data frame created in either block can be accessed if the connection is established. This feature of Zerve allows the users to have seamless development across languages such as R, Python, and SQL.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fq9bxrhJMshzqP6s78jBE%2FScreenshot%202025-03-26%20at%204.35.41%E2%80%AFPM.png?alt=media&#x26;token=2e734dac-9798-47e3-95de-749e5ae82443" alt=""><figcaption><p>R to Python</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FnWaediZoH4Zdds4EXTgG%2FScreenshot%202025-03-26%20at%204.38.23%E2%80%AFPM.png?alt=media&#x26;token=9d5fa08e-1794-46cb-b255-5ae84acaa661" alt=""><figcaption><p>Python to R</p></figcaption></figure>
+
+
+# Compute Settings
+
+## Stateful Compute
+
+For code execution zerve uses cloud compute (lambda or fargate or GPU) at block level. When a block is run, zerve spins up relevant compute resources for code execution.&#x20;
+
+Once successfully executed the results are cached, serialized and stored on disk. This is built on top of a canvas environment for true collaboration and uses DAG workflow to process code execution order.
+
+Post successful code execution data is stored on disk separate from compute. This creates a stable environment to do data science and removes all the shortcomings that we get from a normal jupyter notebook.
+
+
+# Lambda vs Fargate vs GPU
+
+## Lambda vs Fargate
+
+Lambda uses AWS lambda to execute code. This is suitable for tasks up to 15 minutes of execution time and has 10GB of memory
+
+Fargate mode lets the user select custom compute CPUs and suitable for long running tasks. This can support CPUs upto 120GB memory.
+
+## **GPU**
+
+Zerve canvas also allow users to select from a range of GPUs with varying performance, memory capacities, and features for heavy compute tasks like training and fine-tuning in deep learning, LLMs  etc.&#x20;
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FoAlsWSXLcFY3iG6JZQ4g%2FScreen%20Recording%202025-03-26%20at%206.29.32%E2%80%AFPM.mp4?alt=media&token=6f13e64e-701b-4e30-975b-98992e080dc4>" %}
+Compute Settings
+{% endembed %}
+
+
+# How Zerve Works
+
+## Execution order:
+
+Zerve canvas follows DAG (Directed Acyclic Graphs) where the values are passed between left to right between blocks.&#x20;
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FtDtRW94AiOc0MLrqJhkV%2FScreen%20Recording%202025-03-25%20at%201.05.54%E2%80%AFPM.mp4?alt=media&token=ed611813-d68b-4303-8a61-a1f0fd8416bb>" %}
+Exwcution order
+{% endembed %}
+
+## Running multiple blocks at once:
+
+If blocks are not interdependent - then multiple blocks can be run at same time by using the run all mode.&#x20;
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fmc3WNQAdG7piTWoErcm7%2FScreen%20Recording%202025-03-25%20at%2012.56.14%E2%80%AFPM.mp4?alt=media&token=008b4812-26eb-406b-b3b2-70a06823daa6>" %}
+Running multiple blocks
+{% endembed %}
+
+## Execution modes:
+
+### Canvas Level:
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FPsIFZQqxENvbIQu7ybJa%2FScreenshot%202025-03-25%20at%201.01.30%E2%80%AFPM.png?alt=media&#x26;token=aed58ccc-fec2-418d-9224-504c3ee5fd5c" alt=""><figcaption></figcaption></figure>
+
+#### **Run All:**
+
+This mode runs all the block from left to right starting from the first unfinished block. (Refer the image above for more info)
+
+#### Force Run All:
+
+This mode will rerun all the blocks from the  first block irrespective of it's run status and replace data outputs. (Refer the image above for more info)
+
+### Block Level:
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FYxSJ0n8LgqI9wuVkb5eC%2Fimage.png?alt=media&#x26;token=aed56064-0d62-4e4f-87e8-a0179ca65eaf" alt=""><figcaption></figcaption></figure>
+
+#### Run this block:
+
+Runs the particular block. This is active only if the block is not run or if there is a code change
+
+#### Run up to here:
+
+Runs all the blocks left of this particular block including the selected block.
+
+#### Force run this block:
+
+Force executes the block regardless of code state or block state.
+
+#### Force run up to here:
+
+Force executes all the blocks up to the particular block regardless of current state.
+
+## How code blocks manage data:
+
+Zerve is designed to be serverless and to abstract compute from storage. Once the code execution is done the data - all the variables, functions, dataframes, charts etc are cached, serialized and stored on disk (s3 in this case). This is then passed on to the next block as input for futher code execution.&#x20;
+
+This stored data is separated from the compute and won't be affected by code execution in downstream blocks. &#x20;
+
+## Block states:
+
+### When is a block's data replaced?
+
+When the block execution has been successfully completed.  It is inheriting an integer and a dataframe from upstream, and its code creates an additional integer and makes some changes to the dataframe.  If the user makes changes to the code in the block and re-runs it, the following are the various scenarios on what data will be passed downstream.
+
+#### **Scenario 1: Code changed and run, resulting in an error.**
+
+* Old data remains unless explicitly modified or deleted.
+
+#### **Scenario 2: Code changed but not run.**
+
+* Old data remains unaffected.  (Check Output section and highlighted run status on top right in the screenshots below)
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FBjuD1PuBBp6Y3pKLwQ6M%2Fscenario_2_3_4a.png?alt=media&#x26;token=4fe49e5d-bd1c-416e-9557-c946519dfc22" alt=""><figcaption><p>Before</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F5H8lMPPGC3RCU9zD3k8R%2Fscenario_2b.png?alt=media&#x26;token=9a8664f1-32de-483f-aa38-3e15f67083a1" alt=""><figcaption><p>After</p></figcaption></figure>
+
+#### **Scenario 3: Code changed and run, still running.**
+
+* Old data remains unless explicitly modified or deleted. (Check Output section and highlighted run status on top right in the screenshots below)
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FmZtaMdV3jYj7YaynC1zk%2Fscenario_2_3_4a.png?alt=media&#x26;token=527ee125-51e1-499a-b6e9-8338914104b8" alt=""><figcaption><p>Before</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FGFeNmbLr6N2J6QXZZN54%2Fscenario_3b.png?alt=media&#x26;token=3714c68e-b038-41c7-935b-893be5e1c62d" alt=""><figcaption><p>After</p></figcaption></figure>
+
+#### **Scenario 4: Code changed, run, and completes successfully.**
+
+* Old data may or may not be replaced by new results, depending on the code's design. (Check Output section and highlighted run status on top right in the screenshots below)
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fvh8S0dOhtG0eJneN2mr2%2Fscenario_3a.png?alt=media&#x26;token=f19ccf03-98f2-4bec-ae72-747250c16356" alt=""><figcaption><p>Before</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6AhqzcDWjH3dD9Vo0xtl%2Fscenario_3b.png?alt=media&#x26;token=6cc1c1d2-f645-4f92-a482-56bee0fcce8b" alt=""><figcaption><p>After</p></figcaption></figure>
+
+
+# Assets
+
+Assets are used for storing functions, queries, constants, secrets, and connections for seamless development.
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Functions &#x26; Classes</strong> </td><td>Reusable code snippets that encapsulate specific logic or operations or classes.  This promotes code modularity, readability, and reduces duplication. </td><td></td><td><a href="assets/functions-and-classes">functions-and-classes</a></td></tr><tr><td><strong>Queries</strong></td><td>Predefined SQL or other data retrieval and manipulation statements used for read/write from databases/warehouses.</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Constants &#x26; Secrets</strong></td><td><p>Environment variables, API keys, cloud configs can be stored and accessed from here. It prevents manual sharing of codes, accidental git commits exposing credentials etc.</p><p></p></td><td></td><td><a href="assets/constants-and-secrets">constants-and-secrets</a></td></tr><tr><td><strong>Connections</strong></td><td>Connections contain database credentials with databases like Snowflake, Databricks, Postgres etc.</td><td></td><td><a href="broken-reference">Broken link</a></td></tr></tbody></table>
+
+##
+
+
+# Functions & Classes
+
+"Functions & Classes" are reusable code snippets that encapsulate specific logic or operations or classes.  This provides code modularity, readability, and reduces duplication.
+
+### Create a Function:
+
+This can be accessed through the create function option under function & classes tab in Assets.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FXDMDvI721bkSbY4ZzF72%2FScreenshot%202025-04-04%20at%201.05.01%E2%80%AFPM.png?alt=media&#x26;token=f4018e6b-20c8-41ae-a1dd-ef34eb966c6e" alt=""><figcaption><p>Creating a function</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FOPGogUPuDjiBK4nO8eub%2FScreenshot%202025-04-04%20at%2012.56.53%E2%80%AFPM.png?alt=media&#x26;token=66e97971-8a7d-4c52-befa-24e267a7235a" alt=""><figcaption><p>Creating a Function</p></figcaption></figure>
+
+There are 4 parts that can be edited once a function is created. First is the function name and versions for tracking.
+
+There are Requirements and Imports that can be used to call certain versions of the library that's required for the function definition to work.
+
+And finally, there is the function definition where python functions and classes can be defined in appropriate syntax.
+
+### Access in Canvas:
+
+The above function can be imported into a canvas by using the Asset Library tab in the canvas. Imported assets are globally available on the canvas and can be accessed from any block.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FXx7ys96PUzlk0QQyzjiK%2FScreen%20Recording%202025-04-04%20at%201.00.22%E2%80%AFPM.mp4?alt=media&token=15722529-aff5-4055-bc8e-eff99b780b3e>" %}
+Access function in canvas
+{% endembed %}
+
+### Share Functions and Classes:
+
+From the asset library tab - based on access level a user can share functions and classes with other team members. This makes sure everyone in the team is using the latest and up to date functions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FWJTrJVdiN8wjvzii9JFt%2FScreenshot%202025-06-19%20at%201.03.16%E2%80%AFPM.png?alt=media&#x26;token=bb3d6702-362b-4b70-b34d-0cccbef8c55e" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FN00gIuTg9Qd4KdSjl7lC%2FScreenshot%202025-06-19%20at%201.04.46%E2%80%AFPM.png?alt=media&#x26;token=d4be48f1-2ba0-4def-8988-e1f2906235f5" alt=""><figcaption></figcaption></figure>
+
+Each version can be tagged as primary, draft, outdated etc. so that team members are always using the up to date version.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FSpHgowjgokuvGU41pzst%2FScreenshot%202025-06-19%20at%201.09.13%E2%80%AFPM.png?alt=media&#x26;token=ce2f8d6d-c613-4412-8093-64242312cdac" alt=""><figcaption></figcaption></figure>
+
+
+# Constants & Secrets
+
+"Constants" are used for unchanging data in code to enhance readability and maintainability, "Secrets" refer to sensitive information that should be protected and not exposed in your code.
+
+### Creating Constants
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FbMDiIHDp7vxGl0DxeUeq%2FScreenshot%202025-06-19%20at%201.12.56%E2%80%AFPM.png?alt=media&#x26;token=7699f13b-3008-4e64-bfb4-10b8d0dfc5fb" alt=""><figcaption><p>Constants</p></figcaption></figure>
+
+Constants within our app are asset functions that are leveraged to use values that do not change during the execution of a program. They are typically used to represent fixed, unchanging data in code, making it easier to manage and understand.
+
+### Importing constants into Canvas
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FsVFQBpAaMFwfSw2iB8k3%2FScreenshot%202025-06-19%20at%201.17.41%E2%80%AFPM.png?alt=media&#x26;token=d3d382a4-ccb4-4990-a3cb-6b256018461f" alt=""><figcaption><p>Adding Constants</p></figcaption></figure>
+
+You can attach any asset to a canvas by following the procedure above.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FfKKUpsIHRYko3XVJMjPR%2FScreenshot%202025-06-19%20at%201.19.46%E2%80%AFPM.png?alt=media&#x26;token=8af72d75-0cc8-4185-b6a0-7e524db11400" alt=""><figcaption></figcaption></figure>
+
+In canvas, the constants are often used as imports within libraries to make commonly used values available to users of the library in a convenient and consistent way.
+
+### Creating Secret Constants
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FgCBlyYfgN93OTJdLK4Km%2FScreenshot%202025-06-19%20at%201.21.31%E2%80%AFPM.png?alt=media&#x26;token=c58c7255-6f56-4f25-a9f9-0d709142c284" alt=""><figcaption><p>Secret Constants</p></figcaption></figure>
+
+Secret constants are essential for accessing sensitive data such as API keys, passwords, access tokens and other confidential data that a program or application needs for execution. This can be easily achieved by using "make secret" or "Secret" option while or after creating the constant.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FvlIkvzXefxBmwGaAlJC0%2FScreenshot%202025-06-19%20at%201.21.48%E2%80%AFPM.png?alt=media&#x26;token=7c4f9e9c-272a-4b32-9b38-0e6d68935b7b" alt=""><figcaption><p>Hiding Secret Key</p></figcaption></figure>
+
+Secrets within asset function can utilize anonymization of the confidential data in canvas for seamless coding experience among team members in an organization.
+
+
+# Connections
+
+Zerve offers support to integrate with popular database solutions which can be queried directly from canvas and can be used across different blocks/languages.
+
+Currently Zerve supports the following database connections with others following soon.
+
+1. Snowflake
+2. PostgreSQL
+3. MySQL
+4. MariaDB
+5. BigQuery
+6. Weaviate
+
+## Setting up a Connection:
+
+1. Go to Assets -> Connections -> Create Connections from your Zerve account's home page.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FBudVGcnnqok3IDlFNn1O%2Fimage.png?alt=media&#x26;token=cdd20d82-3ea3-48da-994b-d0bb2528176a" alt=""><figcaption><p>connection setup</p></figcaption></figure>
+
+2. Select the required connection to setup and add the necessary connection parameters.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FLgsoMMTdzVyWRuxveGrn%2Fimage.png?alt=media&#x26;token=3712f8dd-2d84-464c-8092-91b211569de6" alt=""><figcaption><p>snowflake connection setup</p></figcaption></figure>
+
+3. Once saved this connection can be accessed from SQL blocks in each canvas.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQSPkfoFhXaFbNZ7di7nh%2Fimage.png?alt=media&#x26;token=671ea799-f547-4deb-8839-8224e5de7752" alt=""><figcaption><p>add connection asset to canvas</p></figcaption></figure>
+
+4. Access the connection from SQL Block and store the queried table as df.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FT9Ifq1MxvK7Mjg2e9ru5%2Fimage.png?alt=media&#x26;token=4943db1b-3f99-42a8-87c3-f202c65126e4" alt=""><figcaption><p>connect from sql block</p></figcaption></figure>
+
+5. Snowflake SQL query is executed and the result is stored as a dataframe in df variable.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FDs5vAymxqn6E5hEY4ccC%2Fimage.png?alt=media&#x26;token=a72a8afb-666a-4c01-a17f-a2e12486fe93" alt=""><figcaption><p>full screen mode of SQL Query</p></figcaption></figure>
+
+This variable is now available for downstream python blocks as an input variable.&#x20;
+
+
+# AI Agent
+
+The AI Agent in Zerve is your supercharged coding and data assistant, designed to help you build, debug, and optimize AI and data workflows seamlessly within the Zerve canvas.
+
+You can describe what you need, whether it is a new workflow, a fix for a broken block, or a change to logic. The agent builds it directly in your workspace. There is no switching tools and no vague suggestions. What sets Zerve apart is the context the agents have.\
+\
+They understand your pipelines, your data, and your intent. They write code, connect components, fix logic, test their own changes, and create the infrastructure needed to run everything they build.
+
+You can work with one agent or have several collaborating at once. They operate inside the Zerve Canvas, where you can see their plans, make adjustments, or let them complete complex tasks on their own. This setup allows for faster development, smoother debugging, and scalable execution without extra tooling or infrastructure overhead.
+
+Zerve's AI agent can do three main actions : Chat, Search & Code. The agent intelligently routes to one of these functions depending on the task at hand.
+
+To initiate a chat with agent click on the AI Assistance icon on bottom right of the canvas as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fs50mWSNA6Apu9f6xGypi%2FScreenshot%202025-06-13%20at%2010.35.40%E2%80%AFAM.png?alt=media&#x26;token=e62f6c60-e309-4d31-8cfe-55d41f32e67f" alt=""><figcaption><p>Initializing a chat</p></figcaption></figure>
+
+To give context to the agent, you upload a file , use voice-to-text or simply write on chat. To use voice-to-text please provide microphone access.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FL1Oale9XXVKe8zmJkNSp%2FScreenshot%202025-06-13%20at%2010.49.19%E2%80%AFAM.png?alt=media&#x26;token=f2af1ce3-e501-41a3-bec6-8334b28b93d7" alt=""><figcaption></figcaption></figure>
+
+
+# Chat
+
+The agent aware of the context of the canvas. Once you initiate the AI agent, it will give you some suggestions based on the content of the canvas. You can click on one of them or give new instructions. ***All the chats are private to the user and are not shared.***
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FQNF1Rw0vVU0uDySSSrOG%2Fimage.png?alt=media&token=550e585d-bbf4-495a-9139-8ba824904eb8>" %}
+Suggestions based on the content of canvas
+{% endembed %}
+
+You can start a new chat or view chat history by clicking on the icon as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fn9W5rcvkHFDTDnyiKlUD%2FScreenshot%202025-06-13%20at%2011.10.35%E2%80%AFAM.png?alt=media&#x26;token=3f9cfaff-ddf2-4783-a0f4-6520ba21277e" alt=""><figcaption><p>Cretae new chat or view chat history</p></figcaption></figure>
+
+You can also rename a chat to ease of review. First you should click on **Chat History** as shown above then rename as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F73Qv0pnNTHS7yW7qnwgq%2Fimage%20(2).png?alt=media&#x26;token=ab8fe739-b838-4f8e-b87b-6b7646fcd5ef" alt=""><figcaption></figcaption></figure>
+
+
+# Search
+
+Agent can search the internet for you based on your input
+
+You can ask the agent to search the web on your request. You can ask it to search for data sources, templates etc. Anything that is beyond the context of the canvas will be searched on the internet as shown below.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fh0UOZKiuDG8WzJOxnw3f%2Fimage%20(3).png?alt=media&#x26;token=739158b9-4823-4abf-8441-19931d402915" alt=""><figcaption><p>Search</p></figcaption></figure>
+
+
+# Code
+
+Zerve's AI agent is aware of the context and working of the canvas, this enables it to work more efficiently and create better results.&#x20;
+
+While coding the agent can create add run blocks, add requirements and edges.&#x20;
+
+Before starting a coding process, the agent will present you with Milestone, Summary, Required Inputs, Anticipated Future Milestones and Tickets. Post this you can accept this plan or ask the agent to make changes. Once you are satisfied with the plan you can ask the agent to proceed. Each ticket that can be run in parallel will be assigned to a coding agent. If it faces an error, it will work on fixing it. The video below shows an example of how the agent can help with coding.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fc36dc8LWTSMEyGzhKsKR%2FAgent%20(1)%20(1).mp4?alt=media&token=5d89db13-e173-474b-8c53-58d11a2c7359>" %}
+Coding with agent
+{% endembed %}
+
+The agent can help with debugging existing code as well. You can click on **Open Error Assist**. The video below shows an example process.
+
+{% embed url="<https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FKUtd1nvfHreYvytANne8%2FError%20Assist.mp4?alt=media&token=cc4e2841-aefa-4826-86b0-6f9fe40846f2>" %}
+Error Assist
+{% endembed %}
+
+### AI Agent Capabilities
+
+The AI Agent in Zerve is designed to support you throughout your development journey with a broad range of powerful features:
+
+* **Code Generation:** Automatically generates clean, modular, and production-ready code snippets for Python, SQL, R, and more, tailored to your project context.
+* **Workflow Design:** Helps you create, edit, and optimize data and AI workflows visually on the Zerve canvas, promoting best practices like modularity and parallel execution.
+* **Data Integration Assistance:** Advises on how to connect and query various data sources like Snowflake, Redshift, PostgreSQL, and others within your workflows.
+* **Generative AI Support:** Implements GenAI prompts for summarization, extraction, and text generation tasks seamlessly integrated into workflows.
+* **Debugging & Optimization:** Suggests improvements, identifies potential errors, and helps you refactor code for better scalability and resilience.
+* **Context Awareness:** Understands your canvas context, including layers, blocks, and existing variables, to provide relevant and non-conflicting suggestions.
+* **Parallel Execution Guidance:** Helps you leverage Zerve’s fleet capabilities to run tasks in parallel and aggregate results efficiently.
+* **API & Deployment Support:** Guides you through creating API endpoints, SageMaker deployments, and managing compute environments.
+
+With these capabilities, the AI Agent enhances your productivity, reduces manual effort, and ensures you build high-quality AI and data solutions on Zerve with ease.
+
+
+# Best Practices
+
+### How to Use
+
+* **Ask Questions:** Pose conceptual questions or seek tips and best practices.
+* **Request Code:** Get help writing or refactoring code blocks, designing workflows, or creating integrations.
+* **Automate Tasks:** Automate manual or repetitive tasks with AI-powered workflows.
+
+### Best Practices
+
+* Keep your questions clear and specific for the best responses.
+* Leverage the AI Agent's suggestions but review generated code for your unique requirements.
+* Combine AI Agent capabilities with Zerve's parallel execution and modular design to build efficient, scalable solutions.
+
+
+# Fleets
+
+Fleets is Zerve's built-in feature for parallel processing. With a single line of code, users can parallelize code to run across multiple blocks.
+
+Fleets in Zerve provide an easy-to-use parallel processing feature. By leveraging the `spread()` function, you can initialize parallel tasks with a simple Python command. The `spread()` function takes a list as input, fanning out multiple compute blocks corresponding to each element of the list. After execution, the `gather()` function collects all results into a list for subsequent processing.
+
+### **ML Pipeline in Fleets:**
+
+\
+Parallel processing in Zerve's fleets can significantly enhance the efficiency of building machine learning (ML) pipelines. Once data processing is complete, multiple algorithms can be applied simultaneously to different subsets of data. This approach allows data scientists to explore various ML models in parallel, quickly identifying which algorithms yield the best results for a given dataset.
+
+Hyperparameter tuning, an essential step in optimizing ML models, can also benefit greatly from the parallel processing capabilities of fleets. By running hyperparameter tuning in fleets, multiple combinations of parameters can be tested simultaneously. This not only speeds up the process but also helps in discovering the most effective configuration to enhance model performance across varied datasets.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FVf7d8dOHYKd9hpVBltDH%2Fimage.png?alt=media&#x26;token=2f972b2b-f0ca-40fc-a18f-6126dce9bdc5" alt=""><figcaption><p>Setup XGBoost Parameters</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2Fad5LR5MxfyXV4ReZ7InT%2Fimage.png?alt=media&#x26;token=03ea0fbb-7177-498f-95af-8c60826e5038" alt=""><figcaption><p>Pass Parameters to Spread Function</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FMDsYx7ECO6URcrlTWBvJ%2Fimage.png?alt=media&#x26;token=a81cf470-b68b-47dc-b6f7-0e7bbe7dc411" alt=""><figcaption><p>72 Concurrent Runs Initialized - One for each Hyper Parameter Combination</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FTXQm3GpkPobpcJtmIshH%2Fimage.png?alt=media&#x26;token=be20c260-3e96-4750-a078-2f5ba92073c7" alt=""><figcaption><p>Use GATHER function to combine all results in Aggregator Block</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FGykdQhvZKH6p5Yz0oI7Z%2Fimage.png?alt=media&#x26;token=b0fe768c-e985-4239-9b09-5df4662deb9d" alt=""><figcaption><p>Retrain with Best Parameter Combination</p></figcaption></figure>
+
+### Data Processing with Fleets:
+
+Fleets in Zerve also enable faster data processing by allowing category-level processing within a dataset column. For instance, when dealing with large datasets that contain categorical variables, fleets can process each category in parallel. This strategy reduces processing time substantially, enabling quicker insights and data-driven decisions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FgtbWhW40p3stKewlIygs%2Fimage.png?alt=media&#x26;token=d588ba7e-5aba-45d8-ac1d-d263340b7c61" alt=""><figcaption><p>Setup Airline list to Query Snowflake</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FO02yS3b4NwwYVOaM9NOm%2Fimage.png?alt=media&#x26;token=1a0d26bc-54db-4664-a23e-6ce5dc11c9c4" alt=""><figcaption><p>Query/Process Snowflake code from 18 concurrent blocks</p></figcaption></figure>
+
+### LLM Evaluation with Fleets:
+
+Furthermore, testing large language models (LLMs) with multiple prompts across different models can become significantly more efficient using fleets. By distributing the workload across different compute blocks, teams can evaluate LLMs against a variety of inputs in a fraction of the time it would take to perform sequential testing. This parallel approach not only saves time but also provides a more comprehensive understanding of how different models perform under diverse conditions.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F61Vq45frfKBEXK8iWV45%2Fimage.png?alt=media&#x26;token=dd4c8949-76f9-426b-b01c-964973e477ac" alt=""><figcaption><p>Create a list of Product Rating Descriptions</p></figcaption></figure>
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FLfe6Px1hPLUJsVIGG0dY%2Fimage.png?alt=media&#x26;token=d0618e96-ff82-4fb3-b2c1-4f53a16f7404" alt=""><figcaption><p>Pass it to 100 concurrent LLM requests for processing</p></figcaption></figure>
+
+
+# Hosted Apps
+
+Zerve's Hosted App feature is designed to streamline and enhance the deployment and management of web applications. This include benefits such as Ease of Deployment, Scalability, friendly interface.
+
+#### Steps to Create a Hosted App on Zerve
+
+1. **Navigate to Hosted Apps**:
+   * From Zerve's organization dashboard, select the "Hosted Apps" tab.
+2. **Configuration**:
+   * **App Type**: Choose the type of application to deploy. In the screenshot, the user's can select between "Python" and "R".
+   * **App Name**: Enter a name for the app. This will be part of the API address. In the given example, the app name is "whisperv2".
+   * **App Script Name**: Specify the main script that will run on the server. In the given example, it's "streamlit\_app.py".
+3. **File Upload**:
+   * Upload the archive file containing the application code. The screenshot shows an uploaded file named "Archive.zip".
+4. **Requirements**:
+   * If the application has dependencies, the user can add them by clicking on "Add package" under the Requirements section.
+5. **Deploy App**:
+   * Once the user have configured all the settings and uploaded your files, click the "Deploy App" button. This will deploy the application to the provided API address.
+
+#### Additional Features
+
+* **Build Logs**: This feature helps the user to view the build logs to monitor the deployment process and troubleshoot any issues.
+* **Custom DNS**: If needed, configure custom DNS settings for the hosted app.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FKghExCtnc6BpujI8shIv%2FScreenshot%202025-04-04%20at%201.53.41%E2%80%AFPM.png?alt=media&#x26;token=0f31dbdb-8f01-49e8-af3e-cd8fb0cb060b" alt=""><figcaption><p>Hosted App</p></figcaption></figure>
+
+
+# Source Control (Git)
+
+Zerve provides integration or linkage with Git repositories. This section guides you through setting up Git integration with supported platforms.
+
+Supported Git Platforms
+
+Zerve supports integration with the following Git services:
+
+* **GitHub (Cloud)**
+* **GitHub Enterprise Server**
+* **Bitbucket Cloud**
+* **Bitbucket OAuth Consumer**
+* **Azure DevOps Repos**
+
+Each integration type requires setup steps that may vary slightly depending on the platform. Follow the relevant section below to configure your Git provider.
+
+### Choosing Where to Install Git Integration: Individual vs. Organization
+
+Zerve supports installing Git integrations at two levels, depending on how you want to manage access and repositories:
+
+**Individual Installation**
+
+This option allows a single user to connect their personal Git provider account (e.g., GitHub, Bitbucket, etc.) to Zerve. Use this when:
+
+* You want to access only your own repositories.
+* You're experimenting or working in a personal workspace.
+
+**To access the installation page:**
+
+* Click on your **profile picture** in the top-right corner.
+* Select **Individual Settings** from the dropdown.
+* Navigate to the **Git Integration** section.
+
+#### **Organization Installation**
+
+Install Git integration at the organization level to enable multiple team members to access shared repositories. Use this when:
+
+* You’re collaborating in a team or company setting.
+* You want centralized control over repository access.
+
+**To access the installation page:**
+
+* Click the **organization selector dropdown** in the top-left corner.
+* Choose the relevant organization.
+* Then click **Settings** in the organization context.
+* Navigate to the **Git Integration** section.
+
+### General Workflow and Features
+
+This section outlines the key steps and capabilities involved in using the Zerve Git integration to manage your canvas source code and version history.
+
+**1. Install or Connect Git Provider**
+
+Choose and install your preferred Git provider (e.g., GitHub, Bitbucket, Azure DevOps) through either your individual or organization settings in Zerve.
+
+**2. Grant Repository Access**
+
+Authorize Zerve to access selected repositories by granting the necessary permissions during installation (read/write access is required).
+
+**3. Select Repository in Canvas**
+
+Within the Canvas environment, choose the Git repository where your canvas code will be saved and versioned.
+
+**4. Commit and Push Code**
+
+Save your changes by committing code directly from the canvas UI — Zerve automatically pushes the latest code and structure to your selected repository.
+
+**5. View Commit History & Compare Changes**
+
+Track the history of commits associated with each canvas and use the block-level diff viewer to compare versions or review changes.
+
+**6. Create Branch**
+
+Branching allows you to safely explore changes without affecting the main codebase — you can create new branches directly from within the canvas.
+
+**7. Commit Branch**
+
+After making changes on a branch, you can commit them like you would on the main branch — this keeps your development isolated until you're ready to merge.
+
+**8. Merge Branch**
+
+Bring changes from a branch back into the mainline by merging — Zerve integrates with your Git provider’s pull request and merge flow where applicable.
+
+**9. Restore Previous Versions**
+
+Easily revert to a prior state of your canvas by selecting a previous commit — Zerve will create a new canvas instance with the restored version.
+
+**10. Include Repository in Execution Environment**
+
+Linked repositories can be included as part of the canvas runtime environment, making it easy to import shared modules, utilities, or configuration directly from Git.
+
+
+# Install Github (Cloud) App
+
+Follow the installation steps described here if you are integrating Zerve with your Github Cloud Repositories.
+
+**Step 1: Install Zerve GitHub App**
+
+Navigate to the settings and install the Zerve GitHub app, which includes authentication and grants access to the required repositories. The following are the steps:
+
+1. **Navigate to Settings:** Go to the appropriate settings page depending on whether you are installing in your individual settings or organization settings.&#x20;
+2. **Select Git Integration:** Select the **Git Integration** option on the left hand menu.
+3. **Install the App:** In the **Git Management Service** dropdown, select **Github** and click the **Install** button.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2F6Zgm418ax0u1sX3eJ4aP%2Fimage.png?alt=media&#x26;token=eaf8481b-6e77-4cf6-af89-8c43ec2833d3" alt=""><figcaption></figcaption></figure>
+
+**Step 2: Grant Repository Access**
+
+During the installation process, users have the option to grant access permissions, such as read, write, and pull, either for all repositories or selectively for specific repositories. The following are the steps:
+
+1. **Grant Required Permissions:** During the installation process, the users are asked to grant permissions such as read, write, and pull to the app. Ensure you grant access to the required repositories.&#x20;
+2. **Authentication:** The users need to authenticate the app with your GitHub to finalize the installation.
+
+<figure><img src="https://1018070783-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FIQKNeqjEeOp9UwUcB9R9%2Fuploads%2FJOJfoJMwVPBGlrqXyR8q%2Fgit%20integration%202.png?alt=media&#x26;token=141cb08b-f30d-4382-b08d-a361cd8dc811" alt=""><figcaption><p>Granting access for Installation</p></figcaption></figure>
+
+
+
+
+---
+
+[Next Page](/guide/llms-full.txt/1)
+
