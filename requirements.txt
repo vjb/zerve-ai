@@ -1,0 +1,23 @@
+# ── Exoplanet Swarm — Python Dependencies ────────────────────────
+# Install with: pip install -r requirements.txt
+
+# CrewAI orchestration framework
+crewai>=0.28.0
+
+# LLM provider (swap for anthropic, google-generativeai, etc.)
+langchain-openai>=0.1.0
+
+# NASA photometry data retrieval (wraps MAST archive)
+lightkurve>=2.4.2
+
+# Astronomy utilities & BLS periodogram
+astropy>=6.0.0
+
+# Signal processing (Savitzky-Golay filter)
+scipy>=1.12.0
+
+# Numerical arrays
+numpy>=1.26.0
+
+# DataFrame output from lightkurve
+pandas>=2.2.0
