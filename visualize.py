@@ -36,11 +36,11 @@ warnings.filterwarnings("ignore")
 sys.path.insert(0, ".")
 
 # ── Import tools ───────────────────────────────────────────────────
-import exoplanet_swarm as sw
+from tools import fetch_lightcurve_tool, clean_signal_tool, bls_periodogram_tool
 
-fetch_tool = sw.fetch_lightcurve_tool.func if hasattr(sw.fetch_lightcurve_tool, "func") else sw.fetch_lightcurve_tool
-clean_tool = sw.clean_signal_tool.func     if hasattr(sw.clean_signal_tool, "func")     else sw.clean_signal_tool
-bls_tool   = sw.bls_periodogram_tool.func  if hasattr(sw.bls_periodogram_tool, "func")  else sw.bls_periodogram_tool
+fetch_tool = fetch_lightcurve_tool.func if hasattr(fetch_lightcurve_tool, "func") else fetch_lightcurve_tool
+clean_tool = clean_signal_tool.func     if hasattr(clean_signal_tool, "func")     else clean_signal_tool
+bls_tool   = bls_periodogram_tool.func  if hasattr(bls_periodogram_tool, "func")  else bls_periodogram_tool
 
 # ── Also import astropy BLS directly for the power spectrum plot ──
 from astropy.timeseries import BoxLeastSquares

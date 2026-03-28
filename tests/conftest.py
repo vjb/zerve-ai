@@ -20,12 +20,12 @@ import numpy as np
 
 sys.path.insert(0, ".")
 
-import exoplanet_swarm as sw
+import tools as tw
 
 # ── Resolve underlying callables (bypass @tool wrapper) ───────────
-fetch_tool = sw.fetch_lightcurve_tool.func if hasattr(sw.fetch_lightcurve_tool, "func") else sw.fetch_lightcurve_tool
-clean_tool = sw.clean_signal_tool.func     if hasattr(sw.clean_signal_tool, "func")     else sw.clean_signal_tool
-bls_tool   = sw.bls_periodogram_tool.func  if hasattr(sw.bls_periodogram_tool, "func")  else sw.bls_periodogram_tool
+fetch_tool = tw.fetch_lightcurve_tool.func if hasattr(tw.fetch_lightcurve_tool, "func") else tw.fetch_lightcurve_tool
+clean_tool = tw.clean_signal_tool.func     if hasattr(tw.clean_signal_tool, "func")     else tw.clean_signal_tool
+bls_tool   = tw.bls_periodogram_tool.func  if hasattr(tw.bls_periodogram_tool, "func")  else tw.bls_periodogram_tool
 
 FIXTURE_DIR  = os.path.join(os.path.dirname(__file__), "fixtures")
 RAW_CACHE    = os.path.join(FIXTURE_DIR, "kepler186_raw.json")
