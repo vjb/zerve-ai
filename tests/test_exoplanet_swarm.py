@@ -96,8 +96,9 @@ class TestFetchToolUnit:
 
     @patch("tools.lk.search_lightcurve")
     def test_network_exception_returns_error_not_raise(self, mock_fn):
+        # Use a non-demo star so the CSV cache fast-path is bypassed
         mock_fn.side_effect = ConnectionError("MAST timeout")
-        data = json.loads(fetch_tool("Kepler-186"))
+        data = json.loads(fetch_tool("Kepler-442"))
         assert "error" in data
         assert "ConnectionError" in data["error"]
 
@@ -149,13 +150,15 @@ class TestBLSToolUnit:
         true_period = 4.0
         data = json.loads(bls_tool(self._bls_input(period=true_period, depth=0.02)))
         assert "error" not in data
-        err = abs(data["period_days"] - true_period) / true_period
+        # PlanetMetrics schema uses orbital_period_days (not period_days)
+        err = abs(data["orbital_period_days"] - true_period) / true_period
         assert err < 0.05, f"Period error {err*100:.1f}% — expected <5%"
 
     def test_all_output_keys_present(self):
         data = json.loads(bls_tool(self._bls_input()))
-        for key in ["period_days", "transit_depth_ppm", "duration_days",
-                    "bls_power", "snr", "planet_probability", "detection_quality"]:
+        # PlanetMetrics keys
+        for key in ["orbital_period_days", "transit_depth_ppm", "transit_duration_days",
+                    "snr", "planet_probability", "detection_quality", "planet_detected"]:
             assert key in data
 
     def test_probability_bounded_0_to_1(self):
@@ -165,6 +168,13 @@ class TestBLSToolUnit:
     def test_deep_clean_transit_is_strong(self):
         data = json.loads(bls_tool(self._bls_input(depth=0.03, n=5000, baseline=120.0)))
         assert data["detection_quality"] in ("Strong", "Moderate")
+
+    def test_bls_has_planet_detected_field(self):
+        """PlanetMetrics must include the planet_detected boolean."""
+        data = json.loads(bls_tool(self._bls_input(depth=0.03, n=5000, baseline=120.0)))
+        assert isinstance(data["planet_detected"], bool)
+        # A deep injected transit at decent SNR should register as detected
+        assert data["planet_detected"] is True
 
     def test_propagates_upstream_error(self):
         err = json.dumps({"error": "cleaning failed"})
@@ -246,34 +256,20 @@ class TestRealKepler186Data:
 
     def test_bls_period_matches_a_known_kepler186_orbit(self, real_bls_result):
         """
-        BLS best period must fall within 10% of at least one confirmed period
-        *or a simple integer/half alias* of it.
-
-        Why aliases? BLS folds at harmonics of the true period when only a
-        fraction of transits fall in the trial window. For example, Kepler-186f
-        (129.9 d) produces a strong alias at ~183 d (3:2 ratio) because with
-        a 200-day max-period cap only ~3 transits land cleanly in the fold.
-        This is a known, documented behaviour of BLS on long-period planets.
+        BLS best period must fall within 15% of a confirmed period or alias.
+        Uses orbital_period_days (PlanetMetrics key).
         """
-        found = real_bls_result["period_days"]
+        found = real_bls_result["orbital_period_days"]  # PlanetMetrics key
 
-        # Build candidate list: base periods + ½×, 2×, 3×, 3/2× aliases
         alias_ratios = [0.5, 1.0, 1.5, 2.0, 3.0]
-        candidates = [
-            p * r
-            for p in self.KNOWN_PERIODS
-            for r in alias_ratios
-        ]
-
+        candidates = [p * r for p in self.KNOWN_PERIODS for r in alias_ratios]
         tolerances = [abs(found - c) / c for c in candidates]
         best_match = min(tolerances)
         closest = candidates[tolerances.index(best_match)]
 
         assert best_match < 0.15, (
             f"BLS found {found:.4f} days — no known Kepler-186 period or alias "
-            f"within 15%. Closest candidate: {closest:.3f} days "
-            f"(error {best_match*100:.1f}%). "
-            f"Known periods: {self.KNOWN_PERIODS}, tested aliases: {alias_ratios}"
+            f"within 15%. Closest: {closest:.3f} days (error {best_match*100:.1f}%)"
         )
 
     def test_bls_detection_is_not_noise(self, real_bls_result):
@@ -283,21 +279,15 @@ class TestRealKepler186Data:
         )
 
     def test_bls_transit_depth_is_plausible(self, real_bls_result):
-        """
-        Kepler-186 planets are Earth-to-Neptune sized.
-        Realistic transit depths: 200–5000 ppm.
-        """
         depth = real_bls_result["transit_depth_ppm"]
-        assert 100 < depth < 10_000, (
-            f"Transit depth {depth:.1f} ppm is outside the plausible range "
-            f"for Kepler-186 planets (100–10000 ppm)"
-        )
+        assert 100 < depth < 10_000
 
     def test_planet_probability_is_meaningful(self, real_bls_result):
-        """For real detected planets, probability should be non-trivial."""
         prob = real_bls_result["planet_probability"]
         assert 0.0 <= prob <= 1.0
-        # With real multi-year Kepler data, SNR should be high enough for >30%
-        assert prob > 0.30, (
-            f"Planet probability {prob:.3f} seems low for Kepler-186 data"
-        )
+        assert prob > 0.30
+
+    def test_bls_has_planet_detected_field(self, real_bls_result):
+        """PlanetMetrics must include the planet_detected boolean."""
+        assert "planet_detected" in real_bls_result
+        assert isinstance(real_bls_result["planet_detected"], bool)

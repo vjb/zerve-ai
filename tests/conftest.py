@@ -118,7 +118,7 @@ def real_bls_result(real_clean_lc):
     with open(BLS_CACHE, "w") as f:
         json.dump(data, f)
     print(f"[fixture] Cached BLS result → {BLS_CACHE}")
-    print(f"[fixture] Best period: {data['period_days']} days | "
+    print(f"[fixture] Best period: {data['orbital_period_days']} days | "
           f"Depth: {data['transit_depth_ppm']} ppm | "
           f"SNR: {data['snr']} | Quality: {data['detection_quality']}")
 

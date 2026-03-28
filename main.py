@@ -15,6 +15,20 @@ Environment:
 """
 
 import sys
+import os
+from dotenv import load_dotenv
+
+# Load .env before anything else (picks up OPENAI_API_KEY, LANGCHAIN_API_KEY, etc.)
+load_dotenv()
+
+# ── LangSmith tracing (optional) ──────────────────────────────────
+# If LANGCHAIN_API_KEY is set, enable tracing so every agent step,
+# tool call, and LLM invocation is visible at smith.langchain.com
+if os.environ.get("LANGCHAIN_API_KEY"):
+    os.environ.setdefault("LANGCHAIN_TRACING_V2", "true")
+    os.environ.setdefault("LANGCHAIN_PROJECT",    "exoplanet-swarm")
+    print("🔍 LangSmith tracing enabled → https://smith.langchain.com")
+
 from agents import make_crew
 
 

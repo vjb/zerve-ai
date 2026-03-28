@@ -215,21 +215,33 @@ def make_crew(star_id: str) -> Crew:
 
     task_communicate = Task(
         description=(
-            f"You have received the BLS analysis results for star '{star_id}'. "
-            "Write EXACTLY two paragraphs for a public science communication response:\n\n"
-            "**Paragraph 1 (The Observation):** Describe what telescope data was used, "
-            "how long it was observed, and what the BLS algorithm found — specifically the "
-            "orbital period and transit depth in ppm. "
-            "Explain transit depth using an analogy (e.g., compare the star's disk to a beach ball "
-            "and the planet to a marble).\n\n"
-            "**Paragraph 2 (The Meaning):** Explain the planet probability score and what it "
-            "implies. Mention the detection quality rating. Be honest about what further "
-            "confirmation (e.g., radial velocity follow-up) would be needed to call this a "
-            "confirmed exoplanet. End with one sentence about why this finding matters."
+            f"You have received a PlanetMetrics JSON object for star '{star_id}'. "
+            "This JSON contains exact scientific measurements. "
+
+            "CRITICAL RULE: You MUST quote every float VERBATIM as it appears in the JSON. "
+            "Do NOT round, approximate, or paraphrase any numerical value. "
+            "If orbital_period_days is 30.012777, you write '30.012777 days' — "
+            "never 'about 30 days' or 'roughly a month'. "
+            "If transit_depth_ppm is 2115.15, you write '2,115.15 ppm' exactly. "
+
+            "Write EXACTLY two paragraphs:\n\n"
+
+            "**Paragraph 1 (The Observation):** State the telescope and mission. "
+            "Describe what BLS found — quote orbital_period_days and transit_depth_ppm "
+            "verbatim. Explain transit depth with an analogy (e.g. if the star's disk "
+            "were a soccer field, the planet's shadow would cover roughly X blades of grass). "
+            "Reference planet_detected and detection_quality.\n\n"
+
+            "**Paragraph 2 (The Meaning):** Quote planet_probability verbatim as a percentage. "
+            "Explain what further confirmation (radial velocity or additional transits) would "
+            "be needed to officially confirm the planet. "
+            "End with one sentence on why this matters — habitability, planetary system "
+            "architecture, or the search for life."
         ),
         expected_output=(
-            "Exactly two clearly labeled paragraphs. No bullet points or JSON. "
-            "Written in English for a general audience. Scientifically accurate but accessible."
+            "Exactly two labeled paragraphs. No bullet points or JSON. "
+            "Every float from the PlanetMetrics JSON is quoted verbatim. "
+            "Scientifically accurate and written for a general audience."
         ),
         agent=science_communicator,
         context=[task_bls],

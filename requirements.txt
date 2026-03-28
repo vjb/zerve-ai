@@ -21,3 +21,12 @@ numpy>=1.26.0
 
 # DataFrame output from lightkurve
 pandas>=2.2.0
+
+# Load environment variables from .env
+python-dotenv>=1.0.0
+
+# Interactive visualization
+plotly>=5.20.0
+
+# Streamlit frontend (Zerve Hosted Apps deployment)
+streamlit>=1.32.0

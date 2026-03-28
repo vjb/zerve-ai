@@ -1,23 +1,14 @@
 """
-visualize.py
-────────────
-Standalone visualization script for the Exoplanet Swarm pipeline.
+visualize.py — Exoplanet Swarm (Plotly Edition)
+────────────────────────────────────────────────
+Interactive Plotly figures for the 4-panel diagnostic view.
+Each function returns a go.Figure that can be embedded in Streamlit
+via st.plotly_chart() or exported as HTML.
 
-Fetches real Kepler-186 data from NASA MAST via lightkurve, runs the
-cleaning and BLS tools, then renders a 4-panel diagnostic figure:
-
-  Panel 1 — Raw normalized light curve
-  Panel 2 — Detrended / cleaned light curve
-  Panel 3 — BLS power spectrum (period vs power, peak highlighted)
-  Panel 4 — Phase-folded light curve at best-fit period
-
-Usage:
-    python visualize.py                   # uses Kepler-186 (default)
-    python visualize.py "TOI 700"         # any star name lightkurve can find
-    python visualize.py --cached          # skip MAST, use tests/fixtures cache
-
-Output:
-    kepler186_transit_analysis.png  (saved to current directory)
+Usage (command line):
+    python visualize.py                  # Kepler-186, pulls from MAST or CSV cache
+    python visualize.py --cached         # Use tests/fixtures/ cache
+    python visualize.py "TOI 700"
 """
 
 import sys
@@ -26,295 +17,300 @@ import json
 import warnings
 import argparse
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")           # headless-safe backend for Zerve.ai
-import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-from matplotlib.ticker import AutoMinorLocator
 
 warnings.filterwarnings("ignore")
 sys.path.insert(0, ".")
 
-# ── Import tools ───────────────────────────────────────────────────
-from tools import fetch_lightcurve_tool, clean_signal_tool, bls_periodogram_tool
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
+from tools import fetch_lightcurve_tool, clean_signal_tool, bls_periodogram_tool
+from astropy.timeseries import BoxLeastSquares
+from astropy import units as u
+
+# ── Resolve underlying callables (bypass @tool wrapper) ───────────
 fetch_tool = fetch_lightcurve_tool.func if hasattr(fetch_lightcurve_tool, "func") else fetch_lightcurve_tool
 clean_tool = clean_signal_tool.func     if hasattr(clean_signal_tool, "func")     else clean_signal_tool
 bls_tool   = bls_periodogram_tool.func  if hasattr(bls_periodogram_tool, "func")  else bls_periodogram_tool
 
-# ── Also import astropy BLS directly for the power spectrum plot ──
-from astropy.timeseries import BoxLeastSquares
-from astropy import units as u
-
-# ── Design tokens ─────────────────────────────────────────────────
+# ── Dark palette ──────────────────────────────────────────────────
 PALETTE = {
-    "bg":        "#0d1117",
-    "panel":     "#161b22",
-    "border":    "#30363d",
-    "text":      "#e6edf3",
-    "subtext":   "#8b949e",
-    "raw":       "#58a6ff",
-    "clean":     "#3fb950",
-    "power":     "#d2a8ff",
-    "peak":      "#f78166",
-    "fold":      "#ffa657",
-    "fold_bin":  "#ffffff",
-    "grid":      "#21262d",
+    "bg":      "#0d1117",
+    "panel":   "#161b22",
+    "border":  "#30363d",
+    "text":    "#e6edf3",
+    "subtext": "#8b949e",
+    "blue":    "#58a6ff",
+    "green":   "#3fb950",
+    "purple":  "#d2a8ff",
+    "red":     "#f78166",
+    "orange":  "#ffa657",
+    "white":   "#ffffff",
 }
 
-
-def _setup_style():
-    plt.rcParams.update({
-        "figure.facecolor":  PALETTE["bg"],
-        "axes.facecolor":    PALETTE["panel"],
-        "axes.edgecolor":    PALETTE["border"],
-        "axes.labelcolor":   PALETTE["text"],
-        "axes.titlecolor":   PALETTE["text"],
-        "xtick.color":       PALETTE["subtext"],
-        "ytick.color":       PALETTE["subtext"],
-        "text.color":        PALETTE["text"],
-        "grid.color":        PALETTE["grid"],
-        "grid.linewidth":    0.6,
-        "font.family":       "DejaVu Sans",
-        "font.size":         10,
-        "axes.titlesize":    12,
-        "axes.titleweight":  "bold",
-        "legend.framealpha": 0.15,
-        "legend.edgecolor":  PALETTE["border"],
-    })
+_LAYOUT_BASE = dict(
+    paper_bgcolor=PALETTE["bg"],
+    plot_bgcolor= PALETTE["panel"],
+    font=dict(color=PALETTE["text"], family="Inter, DejaVu Sans, sans-serif"),
+    margin=dict(l=60, r=20, t=50, b=50),
+    xaxis=dict(gridcolor=PALETTE["border"], showgrid=True, zeroline=False,
+               tickfont=dict(color=PALETTE["subtext"])),
+    yaxis=dict(gridcolor=PALETTE["border"], showgrid=True, zeroline=False,
+               tickfont=dict(color=PALETTE["subtext"])),
+)
 
 
-def _phase_fold(time, flux, period):
-    """Fold time array to phase [0, 1) at given period."""
-    phase = (time % period) / period
-    idx = np.argsort(phase)
-    return phase[idx], flux[idx]
+# ══════════════════════════════════════════════════════════════════
+#  Figure builders — each returns a standalone go.Figure
+# ══════════════════════════════════════════════════════════════════
+
+def make_raw_lc_figure(raw_data: dict) -> go.Figure:
+    """Panel 1: Raw normalized light curve."""
+    t = np.array(raw_data["time"])
+    f = np.array(raw_data["flux"])
+    step = max(1, len(t) // 20_000)
+
+    fig = go.Figure()
+    fig.add_trace(go.Scattergl(
+        x=t[::step], y=f[::step],
+        mode="markers",
+        marker=dict(color=PALETTE["blue"], size=1.5, opacity=0.5),
+        name="Normalized flux",
+        hovertemplate="BJD: %{x:.2f}<br>Flux: %{y:.6f}<extra></extra>",
+    ))
+    fig.update_layout(
+        **_LAYOUT_BASE,
+        title=dict(text=f"Raw Normalized Light Curve  ·  {raw_data['records']:,} cadences",
+                   font=dict(size=14)),
+        xaxis_title="Time (BJD)",
+        yaxis_title="Normalized Flux",
+        height=380,
+    )
+    return fig
 
 
-def _bin_folded(phase, flux, n_bins=150):
-    """Bin a phase-folded light curve for a clean overlay."""
-    bins = np.linspace(0, 1, n_bins + 1)
-    centers = 0.5 * (bins[:-1] + bins[1:])
-    binned = np.full(n_bins, np.nan)
-    for i in range(n_bins):
-        mask = (phase >= bins[i]) & (phase < bins[i + 1])
-        if mask.sum() > 0:
-            binned[i] = np.median(flux[mask])
-    return centers, binned
-
-
-def run(star_id: str, use_cache: bool = False, output_path: str = None):
-    """
-    Full pipeline + 4-panel plot for the given star.
-
-    Args:
-        star_id    : Any name recognized by lightkurve (e.g. 'Kepler-186')
-        use_cache  : If True, load from tests/fixtures/ instead of MAST
-        output_path: Where to save the PNG. Defaults to <star_id>_analysis.png
-    """
-    _setup_style()
-
-    FIXTURE_DIR = os.path.join("tests", "fixtures")
-    safe_name   = star_id.replace(" ", "").replace("-", "").lower()
-
-    # ── 1. Fetch ───────────────────────────────────────────────────
-    raw_cache = os.path.join(FIXTURE_DIR, "kepler186_raw.json")
-    if use_cache and os.path.exists(raw_cache):
-        print(f"[viz] Loading raw data from cache: {raw_cache}")
-        with open(raw_cache) as f:
-            raw_data = json.load(f)
-    else:
-        print(f"[viz] Fetching {star_id} from NASA MAST via lightkurve...")
-        raw_json = fetch_tool(star_id)
-        raw_data = json.loads(raw_json)
-        if "error" in raw_data:
-            print(f"[viz] ERROR: {raw_data['error']}")
-            sys.exit(1)
-
-    print(f"[viz] {raw_data['records']:,} cadences from {raw_data['mission']}")
-
-    # ── 2. Clean ───────────────────────────────────────────────────
-    clean_cache = os.path.join(FIXTURE_DIR, "kepler186_clean.json")
-    if use_cache and os.path.exists(clean_cache):
-        print(f"[viz] Loading clean data from cache: {clean_cache}")
-        with open(clean_cache) as f:
-            clean_data = json.load(f)
-    else:
-        print("[viz] Cleaning signal...")
-        clean_json = clean_tool(json.dumps(raw_data))
-        clean_data = json.loads(clean_json)
-        if "error" in clean_data:
-            print(f"[viz] ERROR: {clean_data['error']}")
-            sys.exit(1)
-
-    # ── 3. BLS ────────────────────────────────────────────────────
-    bls_cache = os.path.join(FIXTURE_DIR, "kepler186_bls.json")
-    if use_cache and os.path.exists(bls_cache):
-        print(f"[viz] Loading BLS result from cache: {bls_cache}")
-        with open(bls_cache) as f:
-            bls_data = json.load(f)
-    else:
-        print("[viz] Running BLS periodogram...")
-        bls_json = bls_tool(json.dumps(clean_data))
-        bls_data = json.loads(bls_json)
-        if "error" in bls_data:
-            print(f"[viz] ERROR: {bls_data['error']}")
-            sys.exit(1)
-
-    best_period = bls_data["period_days"]
-    depth_ppm   = bls_data["transit_depth_ppm"]
-    snr         = bls_data["snr"]
-    prob        = bls_data["planet_probability"]
-    quality     = bls_data["detection_quality"]
-    mission     = raw_data["mission"]
-
-    print(f"[viz] Best period: {best_period:.4f} days | Depth: {depth_ppm:.1f} ppm | "
-          f"SNR: {snr:.2f} | Quality: {quality}")
-
-    # ── 4. Re-run BLS to get full power spectrum for plotting ─────
-    print("[viz] Computing full BLS power spectrum for plot...")
+def make_clean_lc_figure(clean_data: dict) -> go.Figure:
+    """Panel 2: Detrended and cleaned light curve."""
     t = np.array(clean_data["time"])
     f = np.array(clean_data["flux"])
-    baseline = float(t.max() - t.min())
-    periods  = np.exp(np.linspace(np.log(0.5), np.log(baseline / 3), 3000)) * u.day
-    bls_model = BoxLeastSquares(t * u.day, f * u.dimensionless_unscaled)
-    periodogram = bls_model.power(periods, duration=[0.05, 0.1, 0.15, 0.2] * u.day)
-    period_vals = periodogram.period.value
-    power_vals  = periodogram.power.value
+    step = max(1, len(t) // 20_000)
 
-    # ── 5. Layout ─────────────────────────────────────────────────
-    fig = plt.figure(figsize=(18, 14), facecolor=PALETTE["bg"])
-    fig.suptitle(
-        f"Exoplanet Swarm  ·  {star_id}  ·  {mission} Mission",
-        fontsize=18, fontweight="bold", color=PALETTE["text"],
-        y=0.97,
+    fig = go.Figure()
+    fig.add_trace(go.Scattergl(
+        x=t[::step], y=f[::step],
+        mode="markers",
+        marker=dict(color=PALETTE["green"], size=1.5, opacity=0.5),
+        name="Cleaned flux",
+        hovertemplate="BJD: %{x:.2f}<br>Flux: %{y:.6f}<extra></extra>",
+    ))
+    fig.add_hline(y=1.0, line_dash="dot",
+                  line_color=PALETTE["subtext"], opacity=0.6)
+    fig.update_layout(
+        **_LAYOUT_BASE,
+        title=dict(
+            text=(f"Detrended & Cleaned  ·  "
+                  f"{clean_data.get('removed_outliers', 0):,} outliers removed"),
+            font=dict(size=14),
+        ),
+        xaxis_title="Time (BJD)",
+        yaxis_title="Normalized Flux",
+        height=380,
     )
+    return fig
 
-    gs = gridspec.GridSpec(
-        2, 2,
-        figure=fig,
-        hspace=0.40,
-        wspace=0.28,
-        left=0.07, right=0.97,
-        top=0.92, bottom=0.08,
+
+def make_bls_figure(clean_data: dict, bls_data: dict,
+                    n_periods: int = 2000) -> go.Figure:
+    """
+    Panel 3: BLS power spectrum with red vertical line at best period.
+    Recomputes a quick periodogram (n_periods=2000 for speed) from clean data.
+    """
+    t = np.array(clean_data["time"], dtype=np.float64)
+    f = np.array(clean_data["flux"], dtype=np.float64)
+    best_period = float(bls_data["orbital_period_days"])
+    quality     = bls_data.get("detection_quality", "?")
+    snr         = bls_data.get("snr", 0)
+
+    baseline  = float(t.max() - t.min())
+    max_period = min(baseline / 3.0, 200.0)
+
+    periods_arr = np.exp(
+        np.linspace(np.log(0.5), np.log(max_period), n_periods)
     )
-    ax_raw   = fig.add_subplot(gs[0, 0])
-    ax_clean = fig.add_subplot(gs[0, 1])
-    ax_bls   = fig.add_subplot(gs[1, 0])
-    ax_fold  = fig.add_subplot(gs[1, 1])
-
-    def _style_ax(ax):
-        ax.grid(True, which="major", alpha=0.4)
-        ax.grid(True, which="minor", alpha=0.15)
-        ax.xaxis.set_minor_locator(AutoMinorLocator())
-        ax.yaxis.set_minor_locator(AutoMinorLocator())
-        for spine in ax.spines.values():
-            spine.set_edgecolor(PALETTE["border"])
-
-    # ── Panel 1: Raw light curve ───────────────────────────────────
-    t_raw = np.array(raw_data["time"])
-    f_raw = np.array(raw_data["flux"])
-
-    # Subsample for speed if very large
-    step = max(1, len(t_raw) // 20_000)
-    ax_raw.scatter(t_raw[::step], f_raw[::step],
-                   s=0.3, color=PALETTE["raw"], alpha=0.5, rasterized=True)
-    ax_raw.set_title("Raw Normalized Light Curve")
-    ax_raw.set_xlabel(f"Time (BJD)  ·  {raw_data['records']:,} cadences")
-    ax_raw.set_ylabel("Normalized Flux")
-    _style_ax(ax_raw)
-
-    # ── Panel 2: Cleaned light curve ──────────────────────────────
-    step2 = max(1, len(t) // 20_000)
-    ax_clean.scatter(t[::step2], f[::step2],
-                     s=0.3, color=PALETTE["clean"], alpha=0.5, rasterized=True)
-    ax_clean.set_title("Detrended & Cleaned Light Curve")
-    ax_clean.set_xlabel(
-        f"Time (BJD)  ·  {clean_data['removed_outliers']:,} outliers removed"
+    bls_model   = BoxLeastSquares(t * u.day, f * u.dimensionless_unscaled)
+    periodogram = bls_model.power(
+        periods_arr * u.day, duration=[0.05, 0.1, 0.2] * u.day
     )
-    ax_clean.set_ylabel("Normalized Flux")
-    _style_ax(ax_clean)
+    pv = periodogram.period.value
+    pw = periodogram.power.value
 
-    # ── Panel 3: BLS periodogram ───────────────────────────────────
-    ax_bls.plot(period_vals, power_vals,
-                color=PALETTE["power"], lw=0.7, alpha=0.85)
-    ax_bls.axvline(best_period, color=PALETTE["peak"], lw=1.8,
-                   linestyle="--", label=f"Best period: {best_period:.4f} d")
-
-    # Annotate known Kepler-186 periods if target matches
-    known = {"b": 3.887, "c": 7.267, "d": 13.342, "e": 22.408, "f": 129.945}
-    if "186" in star_id:
-        ymax = power_vals.max()
-        for letter, p in known.items():
-            if p < period_vals.max():
-                ax_bls.axvline(p, color=PALETTE["fold_bin"], lw=0.6,
-                               linestyle=":", alpha=0.5)
-                ax_bls.text(p, ymax * 0.92, f" {letter}", fontsize=7,
-                            color=PALETTE["subtext"], va="top")
-
-    ax_bls.set_xscale("log")
-    ax_bls.set_title("BLS Periodogram")
-    ax_bls.set_xlabel("Trial Period (days, log scale)")
-    ax_bls.set_ylabel("BLS Power")
-    ax_bls.legend(fontsize=9, loc="upper left",
-                  facecolor=PALETTE["panel"], labelcolor=PALETTE["text"])
-    _style_ax(ax_bls)
-
-    # ── Panel 4: Phase-folded light curve ─────────────────────────
-    phase, f_sorted = _phase_fold(t, f, best_period)
-    # Scatter (raw points)
-    ax_fold.scatter(phase, f_sorted, s=0.5, color=PALETTE["fold"],
-                    alpha=0.25, rasterized=True, label="Individual cadences")
-    # Binned overlay
-    bin_phase, bin_flux = _bin_folded(phase, f_sorted, n_bins=200)
-    ax_fold.plot(bin_phase, bin_flux, color=PALETTE["fold_bin"],
-                 lw=1.8, label="Binned median", zorder=5)
-
-    ax_fold.set_title(f"Phase-Folded at {best_period:.4f} days")
-    ax_fold.set_xlabel("Orbital Phase")
-    ax_fold.set_ylabel("Normalized Flux")
-    ax_fold.legend(fontsize=9, loc="upper right",
-                   facecolor=PALETTE["panel"], labelcolor=PALETTE["text"],
-                   markerscale=6)
-    _style_ax(ax_fold)
-
-    # ── Stats annotation block ─────────────────────────────────────
-    stats_text = (
-        f"Period:  {best_period:.4f} d\n"
-        f"Depth:   {depth_ppm:.0f} ppm\n"
-        f"SNR:     {snr:.2f}\n"
-        f"P(planet): {prob:.1%}\n"
-        f"Quality: {quality}"
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=pv, y=pw,
+        mode="lines",
+        line=dict(color=PALETTE["purple"], width=0.8),
+        name="BLS power",
+        hovertemplate="Period: %{x:.4f} d<br>Power: %{y:.6f}<extra></extra>",
+    ))
+    fig.add_vline(
+        x=best_period,
+        line_color=PALETTE["red"], line_dash="dash", line_width=2,
+        annotation_text=f"  {best_period:.4f} d  ({quality}, SNR {snr:.1f})",
+        annotation_font_color=PALETTE["red"],
     )
-    fig.text(
-        0.985, 0.50, stats_text,
-        fontsize=9.5, va="center", ha="right",
-        color=PALETTE["text"],
-        fontfamily="monospace",
-        bbox=dict(boxstyle="round,pad=0.5", facecolor=PALETTE["panel"],
-                  edgecolor=PALETTE["border"], alpha=0.9),
+    fig.update_layout(
+        **_LAYOUT_BASE,
+        title=dict(text="BLS Power Spectrum", font=dict(size=14)),
+        xaxis_title="Trial Period (days, log scale)",
+        yaxis_title="BLS Power",
+        xaxis_type="log",
+        height=380,
     )
+    return fig
 
-    # ── Save ──────────────────────────────────────────────────────
-    if output_path is None:
-        output_path = f"{safe_name}_transit_analysis.png"
 
-    fig.savefig(output_path, dpi=150, bbox_inches="tight",
-                facecolor=PALETTE["bg"])
-    print(f"[viz] Saved → {output_path}")
-    return output_path
+def make_phase_fold_figure(clean_data: dict, bls_data: dict) -> go.Figure:
+    """Panel 4: Phase-folded light curve at best-fit period."""
+    t = np.array(clean_data["time"], dtype=np.float64)
+    f = np.array(clean_data["flux"], dtype=np.float64)
+    best_period = float(bls_data["orbital_period_days"])
+    depth_ppm   = bls_data.get("transit_depth_ppm", 0)
+
+    phase   = (t % best_period) / best_period
+    idx     = np.argsort(phase)
+    phase_s = phase[idx]
+    flux_s  = f[idx]
+
+    # Binned median overlay
+    n_bins  = 200
+    bins    = np.linspace(0, 1, n_bins + 1)
+    centers = 0.5 * (bins[:-1] + bins[1:])
+    binned  = np.array([
+        np.median(flux_s[(phase_s >= bins[i]) & (phase_s < bins[i + 1])])
+        if np.any((phase_s >= bins[i]) & (phase_s < bins[i + 1]))
+        else float("nan")
+        for i in range(n_bins)
+    ])
+
+    step = max(1, len(phase_s) // 20_000)
+
+    fig = go.Figure()
+    fig.add_trace(go.Scattergl(
+        x=phase_s[::step], y=flux_s[::step],
+        mode="markers",
+        marker=dict(color=PALETTE["orange"], size=1.5, opacity=0.2),
+        name="Individual cadences",
+        hoverinfo="skip",
+    ))
+    fig.add_trace(go.Scatter(
+        x=centers, y=binned,
+        mode="lines",
+        line=dict(color=PALETTE["white"], width=2),
+        name="Binned median",
+        hovertemplate="Phase: %{x:.3f}<br>Flux: %{y:.6f}<extra></extra>",
+    ))
+    fig.update_layout(
+        **_LAYOUT_BASE,
+        title=dict(
+            text=f"Phase-Folded at {best_period:.4f} days  ·  Depth {depth_ppm:.0f} ppm",
+            font=dict(size=14),
+        ),
+        xaxis_title="Orbital Phase",
+        yaxis_title="Normalized Flux",
+        legend=dict(x=0.01, y=0.01, bgcolor="rgba(0,0,0,0)"),
+        height=380,
+    )
+    return fig
+
+
+def make_combined_figure(raw_data: dict, clean_data: dict, bls_data: dict) -> go.Figure:
+    """
+    4-panel combined figure (2×2 grid) — for command-line / HTML export.
+    """
+    from plotly.subplots import make_subplots as _ms
+    fig = _ms(rows=2, cols=2, subplot_titles=[
+        "Raw Normalized Light Curve",
+        "Detrended & Cleaned Light Curve",
+        "BLS Power Spectrum",
+        f"Phase-Folded at {bls_data['orbital_period_days']:.4f} d",
+    ])
+
+    for src, dest_row, dest_col in [
+        (make_raw_lc_figure(raw_data),            1, 1),
+        (make_clean_lc_figure(clean_data),         1, 2),
+    ]:
+        for trace in src.data:
+            fig.add_trace(trace, row=dest_row, col=dest_col)
+
+    bls_fig = make_bls_figure(clean_data, bls_data)
+    for trace in bls_fig.data:
+        fig.add_trace(trace, row=2, col=1)
+    fig.update_xaxes(type="log", row=2, col=1)
+
+    pf_fig = make_phase_fold_figure(clean_data, bls_data)
+    for trace in pf_fig.data:
+        fig.add_trace(trace, row=2, col=2)
+
+    fig.update_layout(
+        paper_bgcolor=PALETTE["bg"],
+        plot_bgcolor= PALETTE["panel"],
+        font=dict(color=PALETTE["text"]),
+        height=800,
+        showlegend=False,
+        title=dict(
+            text=f"Exoplanet Swarm  ·  {raw_data.get('star_id','?')}  ·  {raw_data.get('mission','?')} Mission",
+            font=dict(size=16),
+        ),
+    )
+    return fig
+
+
+# ══════════════════════════════════════════════════════════════════
+#  CLI entry point
+# ══════════════════════════════════════════════════════════════════
+
+def run(star_id: str, use_cache: bool = False, output_html: str = None):
+    FIXTURE_DIR = os.path.join("tests", "fixtures")
+
+    def _load_or_run(cache_path, fn, *args):
+        if use_cache and os.path.exists(cache_path):
+            print(f"[viz] Loading cache: {cache_path}")
+            with open(cache_path) as fp:
+                return json.load(fp)
+        result = json.loads(fn(*args))
+        with open(cache_path, "w") as fp:
+            json.dump(result, fp)
+        return result
+
+    raw_data   = _load_or_run(os.path.join(FIXTURE_DIR, "kepler186_raw.json"),
+                               fetch_tool, star_id)
+    clean_data = _load_or_run(os.path.join(FIXTURE_DIR, "kepler186_clean.json"),
+                               clean_tool, json.dumps(raw_data))
+    bls_data   = _load_or_run(os.path.join(FIXTURE_DIR, "kepler186_bls.json"),
+                               bls_tool,   json.dumps(clean_data))
+
+    if "error" in raw_data or "error" in clean_data or "error" in bls_data:
+        print("[viz] ERROR in pipeline:", raw_data.get("error") or clean_data.get("error") or bls_data.get("error"))
+        return
+
+    print(f"[viz] Best period: {bls_data['orbital_period_days']:.4f} d | "
+          f"Depth: {bls_data['transit_depth_ppm']:.1f} ppm | SNR: {bls_data['snr']:.2f}")
+
+    fig = make_combined_figure(raw_data, clean_data, bls_data)
+
+    if output_html is None:
+        safe = star_id.replace(" ", "").replace("-", "").lower()
+        output_html = f"{safe}_transit_analysis.html"
+
+    fig.write_html(output_html)
+    print(f"[viz] Saved interactive HTML → {output_html}")
+    return fig
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Visualize exoplanet transit analysis for any MAST target."
-    )
-    parser.add_argument("star_id", nargs="?", default="Kepler-186",
-                        help="Star identifier (default: Kepler-186)")
-    parser.add_argument("--cached", action="store_true",
-                        help="Use cached fixtures from tests/fixtures/ instead of MAST")
-    parser.add_argument("--output", default=None,
-                        help="Output PNG path (default: <star>_transit_analysis.png)")
+    parser = argparse.ArgumentParser(description="Interactive Plotly visualization for Exoplanet Swarm.")
+    parser.add_argument("star_id", nargs="?", default="Kepler-186")
+    parser.add_argument("--cached", action="store_true")
+    parser.add_argument("--output", default=None)
     args = parser.parse_args()
-
-    run(args.star_id, use_cache=args.cached, output_path=args.output)
+    run(args.star_id, use_cache=args.cached, output_html=args.output)
