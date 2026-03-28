@@ -209,63 +209,184 @@ st.divider()
 # ══════════════════════════════════════════════════════════════════
 
 def _create_3d_orbit_model(star_id: str, period_days: float) -> go.Figure:
-    """Interactive 3D star-planet system model."""
-    u = np.linspace(0, 2 * np.pi, 50)
-    v = np.linspace(0, np.pi, 50)
+    """
+    Animated top-down orbital system visualization.
+    Deep-space starfield + glowing star + planet orbit animation.
+    """
+    rng = np.random.default_rng(42)
 
-    # Host star sphere
-    x_star = 2 * np.outer(np.cos(u), np.sin(v))
-    y_star = 2 * np.outer(np.sin(u), np.sin(v))
-    z_star = 2 * np.outer(np.ones(np.size(u)), np.cos(v))
+    SPACE_BG     = "#000814"
+    STAR_YELLOW  = "#FFD60A"
+    PLANET_BLUE  = "#4FC3F7"
+    ORBIT_COLOR  = "rgba(88,166,255,0.20)"
 
-    # Orbital path
-    theta   = np.linspace(0, 2 * np.pi, 200)
-    x_orbit = 8 * np.cos(theta)
-    y_orbit = 8 * np.sin(theta)
-    z_orbit = np.zeros_like(theta)
+    # ── Background star field ──────────────────────────────────────
+    n_bg = 220
+    bg_x    = rng.uniform(-15, 15, n_bg)
+    bg_y    = rng.uniform(-15, 15, n_bg)
+    bg_sz   = rng.uniform(1.0, 3.5, n_bg)
+    bg_clrs = rng.choice(
+        ["#ffffff", "#fff9c4", "#cce0ff", "#ffd6b3", "#e0e0ff"], n_bg
+    )
 
-    # Planet sphere at orbital position
-    x_planet = 0.5 * np.outer(np.cos(u), np.sin(v)) + 8
-    y_planet = 0.5 * np.outer(np.sin(u), np.sin(v))
-    z_planet = 0.5 * np.outer(np.ones(np.size(u)), np.cos(v))
+    # ── Orbital ring ───────────────────────────────────────────────
+    orbit_r = 8.5
+    t       = np.linspace(0, 2 * np.pi, 500)
+    orb_x   = orbit_r * np.cos(t)
+    orb_y   = orbit_r * np.sin(t)
 
-    fig = go.Figure()
-    fig.add_trace(go.Surface(
-        x=x_star, y=y_star, z=z_star,
-        colorscale="YlOrRd", showscale=False, name="Host Star",
-        hovertemplate="Host Star<extra></extra>",
+    # ── Helper: all traces for a given planet angle ────────────────
+    def _planet_traces(angle: float) -> list:
+        px, py = orbit_r * np.cos(angle), orbit_r * np.sin(angle)
+        glow = []
+        for sz, op in [(32, 0.05), (22, 0.12), (14, 0.28)]:
+            glow.append(go.Scatter(
+                x=[px], y=[py], mode="markers",
+                marker=dict(size=sz, color=PLANET_BLUE, opacity=op),
+                hoverinfo="skip", showlegend=False,
+            ))
+        glow.append(go.Scatter(
+            x=[px], y=[py], mode="markers",
+            marker=dict(size=11, color=PLANET_BLUE,
+                        line=dict(color="#ffffff", width=1.5)),
+            name=f"{star_id} b",
+            hovertemplate=(
+                f"<b>{star_id} b</b><br>"
+                f"Period: {period_days:.4f} days<br>"
+                f"Angle: {np.degrees(angle):.0f}°<extra></extra>"
+            ),
+        ))
+        return glow  # 4 traces
+
+    # ── Static base traces ─────────────────────────────────────────
+    base = []
+
+    # Starfield
+    base.append(go.Scatter(
+        x=bg_x, y=bg_y, mode="markers",
+        marker=dict(size=bg_sz, color=bg_clrs, opacity=0.70),
+        hoverinfo="skip", showlegend=False,
     ))
-    fig.add_trace(go.Scatter3d(
-        x=x_orbit, y=y_orbit, z=z_orbit,
-        mode="lines",
-        line=dict(color="#58a6ff", width=2, dash="dot"),
-        name="Orbital Path",
-        hoverinfo="skip",
+
+    # Orbit ring
+    base.append(go.Scatter(
+        x=orb_x, y=orb_y, mode="lines",
+        line=dict(color=ORBIT_COLOR, width=1.2),
+        hoverinfo="skip", showlegend=False,
     ))
-    fig.add_trace(go.Surface(
-        x=x_planet, y=y_planet, z=z_planet,
-        colorscale="Blues", showscale=False, name=f"{star_id} b",
-        hovertemplate=f"{star_id} b<extra></extra>",
+
+    # Star glow — 6 concentric alpha layers
+    for sz, op in [(110, 0.018), (80, 0.035), (58, 0.06),
+                   (40, 0.12),  (26, 0.30), (17, 0.70)]:
+        base.append(go.Scatter(
+            x=[0], y=[0], mode="markers",
+            marker=dict(size=sz, color=STAR_YELLOW, opacity=op),
+            hoverinfo="skip", showlegend=False,
+        ))
+
+    # Star core + label
+    base.append(go.Scatter(
+        x=[0], y=[0], mode="markers+text",
+        marker=dict(size=20, color="#FFF9E6",
+                    line=dict(color=STAR_YELLOW, width=2)),
+        text=[star_id], textposition="top right",
+        textfont=dict(color="#ffffff", size=11, family="Inter, sans-serif"),
+        name=star_id,
+        hovertemplate=f"<b>{star_id}</b><br>Host Star<extra></extra>",
     ))
+
+    # Transit indicator (faint vertical band — planet passes here)
+    base.append(go.Scatter(
+        x=[orbit_r - 0.4, orbit_r - 0.4, orbit_r + 0.4, orbit_r + 0.4, orbit_r - 0.4],
+        y=[-2.5, 2.5, 2.5, -2.5, -2.5],
+        mode="lines", fill="toself",
+        fillcolor="rgba(255, 214, 10, 0.05)",
+        line=dict(color="rgba(255,214,10,0.20)", width=1, dash="dot"),
+        name="Transit Zone",
+        hovertemplate="Transit Zone<extra></extra>",
+    ))
+
+    # Planet at initial position (45°)
+    init_planet = _planet_traces(np.pi / 4)
+    all_traces  = base + init_planet
+
+    n_base    = len(base)
+    p_indices = list(range(n_base, n_base + 4))   # 4 planet traces
+
+    # ── Animation frames (72 steps = every 5°) ────────────────────
+    frames = [
+        go.Frame(
+            data=_planet_traces(angle),
+            traces=p_indices,
+            name=str(i),
+        )
+        for i, angle in enumerate(np.linspace(0, 2 * np.pi, 72, endpoint=False))
+    ]
+
+    fig = go.Figure(data=all_traces, frames=frames)
+
     fig.update_layout(
         title=dict(
-            text=f"🪐 3D System Model: {star_id} b  ·  {period_days:.2f}-day orbit",
-            font=dict(color="#ffffff", size=14),
+            text=(f"🪐 {star_id} System  ·  {period_days:.4f}-day orbit "
+                  f"detected via BLS transit search"),
+            font=dict(color="#ffffff", size=13,
+                      family="Inter, DejaVu Sans, sans-serif"),
+            x=0.02,
         ),
-        scene=dict(
-            xaxis=dict(showbackground=False, showticklabels=False, title=""),
-            yaxis=dict(showbackground=False, showticklabels=False, title=""),
-            zaxis=dict(showbackground=False, showticklabels=False, title=""),
-            bgcolor="#0d1117",
+        paper_bgcolor=SPACE_BG,
+        plot_bgcolor=SPACE_BG,
+        xaxis=dict(visible=False, range=[-13, 13]),
+        yaxis=dict(visible=False, range=[-13, 13],
+                   scaleanchor="x", scaleratio=1),
+        showlegend=True,
+        legend=dict(
+            font=dict(color="#c9d1d9", size=11),
+            bgcolor="rgba(0,0,0,0)",
+            bordercolor="rgba(48,54,61,0.6)",
+            borderwidth=1,
+            x=0.01, y=0.99,
         ),
-        paper_bgcolor="#0d1117",
-        font=dict(color="#e6edf3"),
-        margin=dict(l=0, r=0, b=0, t=50),
-        height=420,
-        legend=dict(font=dict(color="#e6edf3"), bgcolor="rgba(0,0,0,0)"),
+        margin=dict(l=0, r=0, t=55, b=10),
+        height=500,
+        # Play / Pause buttons
+        updatemenus=[dict(
+            type="buttons",
+            showactive=False,
+            x=0.02, y=0.04,
+            xanchor="left", yanchor="bottom",
+            bgcolor="#161b22",
+            bordercolor="#30363d",
+            font=dict(color="#e6edf3", size=12),
+            buttons=[
+                dict(
+                    label="▶  Animate Orbit",
+                    method="animate",
+                    args=[None, dict(
+                        frame=dict(duration=75, redraw=True),
+                        fromcurrent=True,
+                        transition=dict(duration=0),
+                        mode="immediate",
+                    )],
+                ),
+                dict(
+                    label="⏸  Pause",
+                    method="animate",
+                    args=[[None], dict(
+                        frame=dict(duration=0, redraw=False),
+                        mode="immediate",
+                    )],
+                ),
+            ],
+        )],
+        annotations=[dict(
+            x=0, y=-11.5, xref="x", yref="y",
+            text=f"BLS Period: {period_days:.4f} d  |  SNR validated  |  Transit Zone: right",
+            font=dict(color="rgba(88,166,255,0.55)", size=9.5),
+            showarrow=False,
+        )],
     )
-    return fig
 
+    return fig
 
 def _get_tools():
     from tools import fetch_lightcurve_tool, clean_signal_tool, bls_periodogram_tool
